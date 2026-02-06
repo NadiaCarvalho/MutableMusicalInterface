@@ -1,13 +1,29 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import PaperDetail from '../views/PaperDetail.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/paper/:id', component: PaperDetail, props: true }
+  { 
+    path: '/', 
+    name: 'Home', 
+    component: Home 
+  },
+  { 
+    path: '/paper/:id', 
+    name: 'PaperDetail', 
+    component: PaperDetail,
+    props: true 
+  }
 ]
 
-export default createRouter({
-  history: createWebHistory(),
-  routes
+const router = createRouter({
+  // Using Hash History for easier GitHub Pages compatibility
+  history: createWebHashHistory(),
+  routes,
+  // This ensures the page scrolls to top when you click a link
+  scrollBehavior() {
+    return { top: 0 }
+  }
 })
+
+export default router

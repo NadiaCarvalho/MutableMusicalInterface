@@ -1,54 +1,103 @@
 export const researchData = {
   title: "The Musical Work as a Mutable Interface",
+  subtitle: "Towards a Co-Creative Electroacoustic Practice",
   author: "Nádia Carvalho",
-  githubList: "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
+  university: "FEUP / INESC TEC",
+  githubCollection: "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
+  
   apps: [
-    { name: "BroadcastJSB", url: "https://nadiacarvalho.github.io/BroadcastJSB/", repo: "github.com/NadiaCarvalho/Broadcast.JSB" },
-    { name: "Bach Latent Navigator", url: "https://nadiacarvalho.github.io/BachLatentNavigator/", repo: "github.com/NadiaCarvalho/BachLatentNavigator" }
+    { 
+      id: "broadcast-jsb",
+      name: "BroadcastJSB", 
+      url: "https://nadiacarvalho.github.io/BroadcastJSB/", 
+      repo: "https://github.com/NadiaCarvalho/Broadcast.JSB",
+      description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales."
+    },
+    { 
+      id: "aethra",
+      name: "Aethra", 
+      repo: "https://github.com/NadiaCarvalho/Aethra",
+      description: "A co-creative autonomous agent for real-time mixed music improvisation."
+    }
   ],
-  datasets: [
-    { name: "Motiv Dataset", doi: "10.7910/DVN/RWCG4B" },
-    { name: "SaxTimbre", doi: "10.7910/DVN/WSFBIJ" }
+
+  subapps: [
+    { 
+      id: "bach-latent-navigator",
+      name: "Bach Latent Navigator", 
+      url: "https://nadiacarvalho.github.io/BachLatentNavigator/", 
+      repo: "https://github.com/NadiaCarvalho/BachLatentNavigator",
+      description: "Evaluation platform for sampling strategies (k-NN vs Linear Interpolation) in music manifolds."
+    },
+    { 
+      id: "encodings-tonal",
+      name: "Latent Tonal Music Encodings", 
+      url: "https://nadiacarvalho.github.io/Latent-Tonal-Music/", 
+      repo: "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
+      description: "An interactive web-platform that allows users to explore the latent behavior and geometric properties of these encodings across a diverse range of symbolic music compositions, providing a tangible bridge between the mathematical representations and their musical outcomes."
+    },
   ],
-  colabs: [
-    { name: "Unveiling Sax Timbre", file: "Unveriling_Sax_Timbre.ipynb" },
-    { name: "MCM24 Latent Spaces", file: "MCM24_Latent_Spaces.ipynb" }
-  ],
+
   publications: [
     {
-      id: "tonal-vae-2023",
+      id: "aimc-2023",
       title: "Exploring Latent Spaces of Tonal Music using Variational Autoencoders",
+      author: "Carvalho, N., & Bernardes, G.",
+      year: 2023,
       venue: "AIMC 2023",
       doi: "2311.03621",
-      abstract: "Investigates the alignment of VAE latent spaces with cognitive tonal distance spaces.",
-      pillar: "Tonal",
+      pillar: "Tonal Pillar",
       colab: "Latent_Tonal_Music.ipynb"
     },
     {
-      id: "sampling-strategies-2024",
+      id: "smc-2024-sampling",
       title: "Exploring Sampling Strategies in Latent Spaces for Music Generation",
+      author: "Carvalho, N., & Bernardes, G.",
+      year: 2024,
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14336029",
-      abstract: "Compares Linear Interpolation, k-NN, and k-NN with Angular Displacement.",
-      pillar: "Tonal",
-      app: "Bach Latent Navigator"
+      pillar: "Tonal Pillar"
     },
     {
-      id: "fourier-phase-2024",
-      title: "Fourier (Common-Tone) Phase Spaces are in Tune with VAEs' Latent Space",
+      id: "mcm-2024-fourier",
+      title: "Fourier Phase Spaces are in Tune with VAEs' Latent Space",
+      author: "Carvalho, N., & Bernardes, G.",
+      year: 2024,
       venue: "MCM 2024",
       doi: "10.1007/978-3-031-60638-0_24",
-      abstract: "Quantifies the geometric alignment between learned latent manifolds and DFT phase spaces.",
-      pillar: "Tonal"
+      pillar: "Tonal Pillar"
     },
     {
-      id: "sax-timbre-rave-2024",
-      title: "Unveiling the Timbre Landscape: A Layered Analysis of Tenor Saxophone in RAVE Models",
+      id: "smc-2024-sax",
+      title: "Unveiling the Timbre Landscape: Analysis of Tenor Saxophone in RAVE Models",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      year: 2024,
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14362599",
-      abstract: "Analyzes how RAVE models cluster extended saxophone techniques.",
-      pillar: "Timbre",
-      dataset: "SaxTimbre"
+      pillar: "Timbre Pillar"
+    },
+    {
+      id: "amicad-2025-motiv",
+      title: "Motiv: A Dataset of Latent Space Representations of Musical Phrase Motions",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      year: 2025,
+      venue: "AM.ICAD 2025",
+      doi: "10.1145/3771594.3771602",
+      pillar: "Timbre Pillar"
+    },
+    {
+      id: "ijpadm-2025-timbre",
+      title: "Exploring Timbre Latent Spaces: Motion-Enhanced Sampling for Musical Co-Improvisation",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      year: 2025,
+      venue: "International Journal of Performance Arts and Digital Media",
+      doi: "10.1080/14794713.2025.2536409",
+      pillar: "Timbre Pillar"
     }
+  ],
+
+  datasets: [
+    { name: "Motiv Dataset", doi: "10.7910/DVN/RWCG4B", description: "Trajectory dataset of saxophonic musical phrases." },
+    { name: "SaxTimbre", doi: "10.7910/DVN/WSFBIJ", description: "Tenor saxophone extended techniques for RAVE training." }
   ]
 }

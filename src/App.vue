@@ -4,6 +4,7 @@
       <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
 
         <router-link to="/" class="flex items-center gap-2 group">
+          <img src="./assets/mutable-icon.png" alt="Thesis Logo" class="w-10 h-10 object-contain" />
           <div class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-white font-bold text-xs group-hover:bg-indigo-700 transition">
             NC
           </div>

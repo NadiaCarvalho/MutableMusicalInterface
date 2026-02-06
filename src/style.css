@@ -1,9 +1,24 @@
 @import "tailwindcss";
 
-/* Your custom transitions can stay below */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.2s ease;
+@theme {
+  --color-primary: #6366f1; /* Indigo */
+  --color-accent: #10b981;  /* Emerald for Datasets */
+  --color-surface: #f8fafc; /* Slate 50 */
 }
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
+
+@layer base {
+  body { @apply bg-surface text-slate-900 antialiased; }
+  h1, h2, h3 { @apply font-bold tracking-tight text-slate-900; }
+  p { @apply leading-relaxed text-slate-600; }
+}
+
+/* Uniform Card Style */
+.research-card {
+  @apply bg-white p-6 rounded-2xl border border-slate-200 shadow-sm 
+         hover:shadow-md hover:border-primary/30 transition-all duration-300;
+}
+
+/* Badge System */
+.pillar-badge {
+  @apply text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full;
 }

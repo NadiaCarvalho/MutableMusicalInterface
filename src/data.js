@@ -3,12 +3,16 @@ export const researchData = {
   subtitle: "Towards a Co-Creative Electroacoustic Practice",
   author: "Nádia Carvalho",
   university: "FEUP / INESC TEC",
+  year: "2026",
   githubCollection: "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
   
-  apps: [
+  // Artifacts includes Apps, Subapps, and Datasets for the ArtifactGrid component
+  artifacts: [
     { 
       id: "broadcast-jsb",
       name: "BroadcastJSB", 
+      pillar: "Tonal",
+      category: "Software System",
       url: "https://nadiacarvalho.github.io/BroadcastJSB/", 
       repo: "https://github.com/NadiaCarvalho/Broadcast.JSB",
       description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales."
@@ -16,26 +20,45 @@ export const researchData = {
     { 
       id: "aethra",
       name: "Aethra", 
+      pillar: "Timbre",
+      category: "Autonomous Agent",
       repo: "https://github.com/NadiaCarvalho/Aethra",
-      description: "A co-creative autonomous agent for real-time mixed music improvisation."
-    }
-  ],
-
-  subapps: [
+      description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models."
+    },
     { 
       id: "bach-latent-navigator",
       name: "Bach Latent Navigator", 
+      pillar: "Tonal",
+      category: "Web Platform",
       url: "https://nadiacarvalho.github.io/BachLatentNavigator/", 
       repo: "https://github.com/NadiaCarvalho/BachLatentNavigator",
       description: "Evaluation platform for sampling strategies (k-NN vs Linear Interpolation) in music manifolds."
     },
     { 
       id: "encodings-tonal",
-      name: "Latent Tonal Music Encodings", 
+      name: "Tonal Music Encodings", 
+      pillar: "Tonal",
+      category: "Web Platform",
       url: "https://nadiacarvalho.github.io/Latent-Tonal-Music/", 
       repo: "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
-      description: "An interactive web-platform that allows users to explore the latent behavior and geometric properties of these encodings across a diverse range of symbolic music compositions, providing a tangible bridge between the mathematical representations and their musical outcomes."
+      description: "Interactive exploration of latent behavior and geometric properties of symbolic music encodings."
     },
+    { 
+      id: "motiv-dataset",
+      name: "Motiv Dataset", 
+      pillar: "Timbre",
+      category: "Dataset",
+      doi: "10.7910/DVN/RWCG4B", 
+      description: "Trajectory dataset of saxophonic musical phrases and latent motion representations." 
+    },
+    { 
+      id: "saxtimbre-dataset",
+      name: "SaxTimbre", 
+      pillar: "Timbre",
+      category: "Dataset",
+      doi: "10.7910/DVN/WSFBIJ", 
+      description: "Comprehensive dataset of tenor saxophone extended techniques for RAVE model training." 
+    }
   ],
 
   publications: [
@@ -47,7 +70,7 @@ export const researchData = {
       venue: "AIMC 2023",
       doi: "2311.03621",
       pillar: "Tonal Pillar",
-      colab: "Latent_Tonal_Music.ipynb"
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     },
     {
       id: "smc-2024-sampling",
@@ -70,7 +93,7 @@ export const researchData = {
     {
       id: "smc-2024-sax",
       title: "Unveiling the Timbre Landscape: Analysis of Tenor Saxophone in RAVE Models",
-      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
       year: 2024,
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14362599",
@@ -79,7 +102,7 @@ export const researchData = {
     {
       id: "amicad-2025-motiv",
       title: "Motiv: A Dataset of Latent Space Representations of Musical Phrase Motions",
-      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
       year: 2025,
       venue: "AM.ICAD 2025",
       doi: "10.1145/3771594.3771602",
@@ -88,16 +111,11 @@ export const researchData = {
     {
       id: "ijpadm-2025-timbre",
       title: "Exploring Timbre Latent Spaces: Motion-Enhanced Sampling for Musical Co-Improvisation",
-      author: "Carvalho, N., Sousa, J., Bernardes, G., \& Portovedo, H.",
+      author: "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
       year: 2025,
       venue: "International Journal of Performance Arts and Digital Media",
       doi: "10.1080/14794713.2025.2536409",
       pillar: "Timbre Pillar"
     }
-  ],
-
-  datasets: [
-    { name: "Motiv Dataset", doi: "10.7910/DVN/RWCG4B", description: "Trajectory dataset of saxophonic musical phrases." },
-    { name: "SaxTimbre", doi: "10.7910/DVN/WSFBIJ", description: "Tenor saxophone extended techniques for RAVE training." }
   ]
 }

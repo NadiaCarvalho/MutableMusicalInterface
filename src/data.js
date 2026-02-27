@@ -23,7 +23,11 @@ export const researchData = {
       pillar: "Timbre",
       category: "Autonomous Agent",
       repo: "https://github.com/NadiaCarvalho/Aethra",
-      description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models."
+      description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
+      study_case: {
+        name: "Echoes of the Unseen",
+        description: ""
+      }
     },
     { 
       id: "bach-latent-navigator",
@@ -79,7 +83,8 @@ export const researchData = {
       year: 2024,
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14336029",
-      pillar: "Tonal Pillar"
+      pillar: "Tonal Pillar",
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     },
     {
       id: "mcm-2024-fourier",
@@ -88,7 +93,8 @@ export const researchData = {
       year: 2024,
       venue: "MCM 2024",
       doi: "10.1007/978-3-031-60638-0_24",
-      pillar: "Tonal Pillar"
+      pillar: "Tonal Pillar",
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     },
     {
       id: "smc-2024-sax",
@@ -97,7 +103,8 @@ export const researchData = {
       year: 2024,
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14362599",
-      pillar: "Timbre Pillar"
+      pillar: "Timbre Pillar",
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     },
     {
       id: "amicad-2025-motiv",
@@ -106,7 +113,8 @@ export const researchData = {
       year: 2025,
       venue: "AM.ICAD 2025",
       doi: "10.1145/3771594.3771602",
-      pillar: "Timbre Pillar"
+      pillar: "Timbre Pillar",
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     },
     {
       id: "ijpadm-2025-timbre",
@@ -115,7 +123,8 @@ export const researchData = {
       year: 2025,
       venue: "International Journal of Performance Arts and Digital Media",
       doi: "10.1080/14794713.2025.2536409",
-      pillar: "Timbre Pillar"
+      pillar: "Timbre Pillar",
+      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
     }
   ]
 }

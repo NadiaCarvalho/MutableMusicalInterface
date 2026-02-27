@@ -14,7 +14,7 @@
         <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
           <router-link to="/" class="hover:text-indigo-600 transition" active-class="text-indigo-600">Home</router-link>
           <a href="/#software" class="hover:text-indigo-600 transition">Software</a>
-          <a href="/#papers" class="hover:text-indigo-600 transition">Papers</a>
+          <a href="/#publications" class="hover:text-indigo-600 transition">Papers</a>
           <a :href="data.githubCollection" target="_blank" class="flex items-center gap-1 hover:text-slate-900 transition">
             GitHub ↗
           </a>

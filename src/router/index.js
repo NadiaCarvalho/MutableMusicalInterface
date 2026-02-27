@@ -1,24 +1,21 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
 import Home from '../views/Home.vue'
+import Software from '../views/Software.vue'
+import Publications from '../views/Publications.vue'
+import ArtifactDetail from '../views/ArtifactDetail.vue'
 import PaperDetail from '../views/PaperDetail.vue'
-import NotFound from '../views/NotFound.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/paper/:id', name: 'PaperDetail', component: PaperDetail, props: true },
-
-  // 2. Add the catch-all route at the bottom
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
+  { path: '/', component: Home },
+  { path: '/software', component: Software },
+  { path: '/publications', component: Publications },
+  // Dynamic detail routes
+  { path: '/software/:id', component: ArtifactDetail, props: true },
+  { path: '/paper/:id', component: PaperDetail, props: true }
 ]
-const router = createRouter({
-  // Using Hash History for easier GitHub Pages compatibility
+
+export default createRouter({
   history: createWebHashHistory(),
   routes,
-  // This ensures the page scrolls to top when you click a link
-  scrollBehavior() {
-    return { top: 0 }
-  }
+  scrollBehavior() { return { top: 0 } }
 })
-
-export default router

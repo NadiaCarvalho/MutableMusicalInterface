@@ -11,7 +11,7 @@
       <div class="flex gap-4 mb-16">
         <a v-if="item.url" :href="item.url" class="px-6 py-2 bg-indigo-600 text-white rounded-lg font-bold text-sm">Launch Application</a>
         <a v-if="item.repo" :href="item.repo" class="px-6 py-2 border rounded-lg font-bold text-sm text-slate-600">Repository</a>
-        <span v-if="item.doi" class="px-6 py-2 bg-slate-50 text-slate-400 rounded-lg text-sm font-mono">DOI: {{ item.doi }}</span>
+        <span v-if="item.doi" class="px-6 py-2 bg-slate-50 text-slate-400 rounded-lg text-sm font-mono">DOI: <a :href="'https://doi.org/' + item.doi">{{ item.doi }}</a></span>
       </div>
   
       <section v-if="item.study_case" class="p-8 bg-indigo-50 rounded-3xl border border-indigo-100">

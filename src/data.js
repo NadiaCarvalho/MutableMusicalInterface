@@ -12,16 +12,16 @@ export const researchData = {
       id: "broadcast-jsb",
       name: "BroadcastJSB", 
       pillar: "Tonal",
-      category: "Software System",
+      category: "Web Platform",
       url: "https://nadiacarvalho.github.io/BroadcastJSB/", 
-      repo: "https://github.com/NadiaCarvalho/Broadcast.JSB",
+      repo: "https://github.com/NadiaCarvalho/BroadcastJSB",
       description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales."
     },
     { 
       id: "aethra",
       name: "Aethra", 
       pillar: "Timbre",
-      category: "Autonomous Agent",
+      category: "PD patch + Py4PD scripts",
       repo: "https://github.com/NadiaCarvalho/Aethra",
       description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
       study_case: {
@@ -72,9 +72,10 @@ export const researchData = {
       author: "Carvalho, N., & Bernardes, G.",
       year: 2023,
       venue: "AIMC 2023",
-      doi: "2311.03621",
+      doi: "10.48550/arXiv.2311.03621",
       pillar: "Tonal Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/Latent-Tonal-Music",
+      colab: "https://github.com/NadiaCarvalho/Latent-Tonal-Music/blob/main/Latent_Tonal_Music.ipynb"
     },
     {
       id: "smc-2024-sampling",
@@ -84,7 +85,8 @@ export const researchData = {
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14336029",
       pillar: "Tonal Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/SMC-BachLatentNavigation",
+      colab: "https://github.com/NadiaCarvalho/SMC-BachLatentNavigation/blob/main/BachLatentNavigation.ipynb"
     },
     {
       id: "mcm-2024-fourier",
@@ -94,7 +96,8 @@ export const researchData = {
       venue: "MCM 2024",
       doi: "10.1007/978-3-031-60638-0_24",
       pillar: "Tonal Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/MCM-Latent-Spaces",
+      colab: "https://github.com/NadiaCarvalho/MCM-Latent-Spaces/blob/main/MCM24_Latent_Spaces.ipynb"
     },
     {
       id: "smc-2024-sax",
@@ -104,7 +107,8 @@ export const researchData = {
       venue: "SMC 2024",
       doi: "10.5281/zenodo.14362599",
       pillar: "Timbre Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/SMC-TimbreLandscape",
+      colab: "https://github.com/NadiaCarvalho/SMC-TimbreLandscape/blob/main/Code.ipynb"
     },
     {
       id: "amicad-2025-motiv",
@@ -114,7 +118,8 @@ export const researchData = {
       venue: "AM.ICAD 2025",
       doi: "10.1145/3771594.3771602",
       pillar: "Timbre Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/Motiv-Dataset",
+      colab: ["https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Construction_Visualization.ipynb", "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Analysis.ipynb"]
     },
     {
       id: "ijpadm-2025-timbre",
@@ -124,7 +129,8 @@ export const researchData = {
       venue: "International Journal of Performance Arts and Digital Media",
       doi: "10.1080/14794713.2025.2536409",
       pillar: "Timbre Pillar",
-      colab: "https://colab.research.google.com/drive/YOUR_LINK_HERE"
+      github: "https://github.com/NadiaCarvalho/IJPA-LatentSpace",
+      colab: ["https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/PhraseRecordingsAnalysis.ipynb", "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/Experiment1_Mechanisms.ipynb"]
     }
   ]
 }

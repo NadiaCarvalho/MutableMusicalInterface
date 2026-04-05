@@ -15,7 +15,17 @@ const routes = [
 ]
 
 export default createRouter({
-  history: createWebHashHistory(),
+  // Pass the base string directly into the history constructor
+  history: createWebHashHistory('/MutableMusicalInterface/'), 
   routes,
-  scrollBehavior() { return { top: 0 } }
-})
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+        top: 80,
+      }
+    }
+    return { top: 0 }
+  },
+});

@@ -9,7 +9,9 @@ export default defineConfig({
     vue(),
     Sitemap({
       hostname: 'https://nadiacarvalho.github.io/MutableMusicalInterface/',
-      dynamicRoutes: ['/paper/aimc-2023', '/paper/smc-2024-sampling', '/paper/mcm-2024-fourier', '/paper/smc-2024-sax', 'paper/amicad-2025-motiv', 'paper/ijpadm-2025-timbre']
+      dynamicRoutes: ['/paper/aimc-2023', '/paper/smc-2024-sampling', '/paper/mcm-2024-fourier',
+        '/paper/smc-2024-sax', '/paper/amicad-2025-motiv', '/paper/ijpadm-2025-timbre',
+        '/software/aethra', '/software/broadcastJSB',]
     })
   ],
 })

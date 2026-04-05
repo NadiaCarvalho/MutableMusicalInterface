@@ -36,8 +36,9 @@
       <div v-if="item.study_case?.examples?.length" class="space-y-8">
         <h4 class="text-sm font-black uppercase text-slate-400 tracking-widest">Media Examples</h4>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="(ex, index) in item.study_case.examples" :key="index" @click="openModal(ex)"
+          <div v-for="(ex, index) in item.study_case.examples" :key="index" @click="openExampleModal(ex)"
             class="flex flex-col p-6 bg-slate-50 rounded-3xl border border-slate-100 cursor-pointer hover:border-indigo-300 hover:bg-white transition-all group shadow-sm">
+
             <div class="mb-6 flex justify-between items-start">
               <div>
                 <p class="font-bold text-slate-800 leading-tight group-hover:text-indigo-600 transition-colors">{{
@@ -49,27 +50,25 @@
                 Fullscreen ↗</span>
             </div>
 
-            <div class="mt-auto" @click.stop>
-
+            <div class="mt-auto space-y-4" @click.stop>
               <div v-if="ex.type === 'video&image' || ex.type === 'image'"
                 class="overflow-hidden rounded-xl bg-black aspect-video shadow-md">
                 <iframe v-if="(ex.url_image || ex.url)?.includes('drive.google')" :src="ex.url_image"
                   class="w-full h-full" frameborder="0" allowfullscreen></iframe>
-                <img v-else :src="ex.url_image || ex.url" class="w-full h-auto object-cover" />
+                <img v-else :src="ex.url_image || ex.url" class="w-full h-full object-cover" />
               </div>
-              <br v-if="ex.type === 'video&image'" />
+
               <div v-if="ex.type === 'video&image' || ex.type === 'video'"
                 class="overflow-hidden rounded-xl bg-black aspect-video shadow-md">
                 <iframe
-                  v-if="(ex.url_video || ex.url)?.includes('youtube') || (ex.url_video || ex.url)?.includes('drive.google')"
-                  :src="ex.url_video || ex.url" class="w-full h-full" frameborder="0" allowfullscreen>
-                </iframe>
+                  v-if="(ex.url_video || ex.url)?.includes('youtube') || (ex.url_video || ex.url)?.includes('drive.google') || (ex.url_video || ex.url)?.includes('vimeo')"
+                  :src="ex.url_video || ex.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
                 <video v-else controls :src="ex.url_video || ex.url" class="w-full h-full object-cover"></video>
               </div>
+
               <div v-if="ex.type === 'audio'" class="pt-2">
                 <audio controls :src="ex.url" class="w-full h-10 opacity-90"></audio>
               </div>
-
             </div>
           </div>
         </div>
@@ -81,10 +80,12 @@
           class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
           <div v-for="(perf, index) in item.study_case.performances" :key="index" :id="'performance-' + perf.id"
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+
             <div
               class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-slate-200 group-hover:bg-indigo-500 text-white transition-all shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
               <div class="w-2 h-2 bg-white rounded-full"></div>
             </div>
+
             <div
               class="w-[calc(100%-4rem)] md:w-[45%] p-6 rounded-3xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow">
               <div class="flex items-center justify-between mb-2">
@@ -94,13 +95,20 @@
               </div>
               <h4 class="text-lg font-bold text-slate-900 mb-2 leading-tight">{{ perf.event }}</h4>
               <p class="text-sm text-slate-500 leading-relaxed mb-4">{{ perf.description }}</p>
+              <a v-if="perf.url" :href="perf.url" target="_blank"
+                class="text-sm text-indigo-500 hover:underline inline-block mb-4">External Link ↗</a>
               <div class="flex gap-3 pt-4 border-t border-slate-50">
-                <span v-if="perf.media_links?.photos?.length"
-                  class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded text-slate-500 uppercase">📸 {{
-    perf.media_links.photos.length }} Photos</span>
-                <span v-if="perf.media_links?.videos?.length"
-                  class="text-[10px] font-bold px-2 py-1 bg-slate-100 rounded text-slate-500 uppercase">🎬 {{
-    perf.media_links.videos.length }} Videos</span>
+                <span v-if="perf.media_links?.photos?.length" @click="openPerformanceModal(perf)"
+                  class="text-[10px] font-bold px-2 py-1 bg-indigo-50 hover:bg-indigo-600 hover:text-white transition-all rounded text-slate-500 uppercase">
+                  📸 {{ perf.media_links.photos.length }} Photos
+                </span>
+                <span v-if="perf.media_links?.videos?.length" @click="openPerformanceModal(perf)"
+                  class="text-[10px] font-bold px-2 py-1 bg-slate-100 hover:bg-slate-600 hover:text-white transition-all rounded text-slate-500 uppercase">
+                  🎬 {{ perf.media_links.videos.length }} Videos
+                </span>
+                <span v-if="perf.media_links?.videos?.length || perf.media_links?.photos?.length"
+                  @click="openPerformanceModal(perf)"
+                  class="text-[10px] font-bold px-2 py-1 bg-slate-100 hover:bg-slate-600 hover:text-white transition-all rounded text-indigo-600 uppercase">View Media ↗</span>
               </div>
             </div>
           </div>
@@ -110,7 +118,7 @@
 
     <Teleport to="body">
       <Transition name="fade">
-        <div v-if="selectedExample" class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+        <div v-if="selectedContent" class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
           <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-md" @click="closeModal"></div>
 
           <div class="relative bg-white w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl">
@@ -120,37 +128,81 @@
             <div class="p-8 md:p-16">
               <header class="mb-10 max-w-2xl">
                 <span
-                  class="text-xs font-bold text-indigo-600 uppercase tracking-widest px-3 py-1 bg-indigo-50 rounded-full">{{
-    selectedExample.type.replace('&', ' + ') }}</span>
-                <h3 class="text-4xl font-black text-slate-900 mt-4 leading-tight">{{ selectedExample.name }}</h3>
-                <p class="text-lg text-slate-500 mt-3">{{ selectedExample.description }}</p>
+                  class="text-xs font-bold text-indigo-600 uppercase tracking-widest px-3 py-1 bg-indigo-50 rounded-full">
+                  {{ contentType === 'performance' ? 'Performance Documentation' : selectedContent.type?.replace('&', '+ ') }}
+                </span>
+                <h3 class="text-4xl font-black text-slate-900 mt-4 leading-tight">
+                  {{ contentType === 'performance' ? selectedContent.event : selectedContent.name }}
+                </h3>
+                <p class="text-lg text-slate-500 mt-3">
+                  {{ contentType === 'performance' ? `${selectedContent.performance_place} — ${selectedContent.date}` :
+    selectedContent.description }}
+                </p>
               </header>
 
-              <div v-if="selectedExample.type === 'video&image'" class="grid lg:grid-cols-2 gap-8 items-start">
-                <div class="aspect-video rounded-2xl border border-slate-100 overflow-hidden bg-slate-50 shadow-inner">
-                  <iframe v-if="selectedExample.url_image?.includes('drive.google')" :src="selectedExample.url_image"
-                    class="w-full h-full aspect-[3/4]" frameborder="0" allowfullscreen></iframe>
-                  <img v-else :src="selectedExample.url_image" class="w-full h-auto object-contain" />
+              <div v-if="contentType === 'performance'" class="space-y-12">
+                <div v-if="selectedContent.media_links?.photos?.length" class="space-y-6">
+                  <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest">Photos</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div v-for="(photo, i) in selectedContent.media_links.photos" :key="i"
+                      class="rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+                      <div class="aspect-video rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
+                      <iframe
+                          v-if="photo.url.includes('youtube') || photo.url.includes('drive.google') || photo.url.includes('vimeo')"
+                          :src="photo.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                      <img v-else :src="photo.url" class="w-full h-auto object-cover" />
+                      </div>
+                      <div class="p-4 bg-slate-50 h-full">
+                        <p class="text-xs text-slate-500 italic">{{ photo.description }}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
+
+                <div v-if="selectedContent.media_links?.videos?.length" class="space-y-6">
+                  <h4 class="text-sm font-black text-slate-400 uppercase tracking-widest">Videos</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div v-for="(vid, i) in selectedContent.media_links.videos" :key="i" class="space-y-3">
+                      <div class="aspect-video rounded-2xl overflow-hidden bg-black shadow-lg">
+                        <iframe
+                          v-if="vid.url.includes('youtube') || vid.url.includes('drive.google') || vid.url.includes('vimeo')"
+                          :src="vid.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                        <video v-else controls :src="vid.url" class="w-full h-full object-cover"></video>
+                      </div>
+                      <p class="text-xs text-slate-500 px-2">{{ vid.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div v-else-if="contentType === 'example'">
+                <div v-if="selectedContent.type === 'video&image'" class="grid lg:grid-cols-2 gap-8 items-start">
+                  <div
+                    class="aspect-video rounded-2xl border border-slate-100 overflow-hidden bg-slate-50 shadow-inner">
+                    <iframe v-if="selectedContent.url_image?.includes('drive.google')" :src="selectedContent.url_image"
+                      class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                    <img v-else :src="selectedContent.url_image" class="w-full h-auto object-contain" />
+                  </div>
+                  <div class="aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
+                    <iframe
+                      v-if="selectedContent.url_video?.includes('youtube') || selectedContent.url_video?.includes('vimeo') || selectedContent.url_video?.includes('drive.google')"
+                      :src="selectedContent.url_video" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                    <video v-else controls :src="selectedContent.url_video" class="w-full h-full object-cover"></video>
+                  </div>
+                </div>
+
+                <div v-else-if="selectedContent.type === 'video'"
+                  class="max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
                   <iframe
-                    v-if="selectedExample.url_video?.includes('youtube') || selectedExample.url_video?.includes('vimeo') || selectedExample.url_video?.includes('drive.google')"
-                    :src="selectedExample.url_video" class="w-full h-full aspect-[3/4]" frameborder="0" allowfullscreen></iframe>
-                  <video v-else controls :src="selectedExample.url_video" class="w-full h-full object-cover"></video>
+                    v-if="selectedContent.url?.includes('youtube') || selectedContent.url?.includes('vimeo') || selectedContent.url?.includes('drive.google')"
+                    :src="selectedContent.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                  <video v-else controls :src="selectedContent.url" class="w-full h-full object-cover"></video>
                 </div>
-              </div>
 
-              <div v-else-if="selectedExample.type === 'video'"
-                class="max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
-                <iframe
-                  v-if="selectedExample.url?.includes('youtube') || selectedExample.url?.includes('vimeo') || selectedExample.url?.includes('drive.google')"
-                  :src="selectedExample.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
-                <video v-else controls :src="selectedExample.url" class="w-full h-full object-cover"></video>
-              </div>
-
-              <div v-else-if="selectedExample.type === 'audio'" class="max-w-2xl mx-auto py-12 text-center">
-                <audio controls :src="selectedExample.url" class="w-full h-12 mb-4"></audio>
-                <p class="text-slate-400 text-sm">Media Source: {{ selectedExample.url }}</p>
+                <div v-else-if="selectedContent.type === 'audio'" class="max-w-2xl mx-auto py-12 text-center">
+                  <audio controls :src="selectedContent.url" class="w-full h-12 mb-4"></audio>
+                  <p class="text-slate-400 text-sm">Media Source: {{ selectedContent.url }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -168,21 +220,26 @@ import { researchData as data } from '../data.js'
 const route = useRoute()
 const item = computed(() => data.artifacts.find(a => a.id === route.params.id))
 
-// Modal State
-const selectedExample = ref(null)
+const selectedContent = ref(null)
+const contentType = ref(null)
 
-const openModal = (ex) => {
-  selectedExample.value = ex
+const openExampleModal = (ex) => {
+  selectedContent.value = ex
+  contentType.value = 'example'
+}
+
+const openPerformanceModal = (perf) => {
+  selectedContent.value = perf
+  contentType.value = 'performance'
 }
 
 const closeModal = () => {
-  selectedExample.value = null
+  selectedContent.value = null
+  contentType.value = null
 }
 
-// Watch modal state to toggle body scroll
-watch(selectedExample, (val) => {
-  if (val) document.body.style.overflow = 'hidden'
-  else document.body.style.overflow = 'auto'
+watch(selectedContent, (val) => {
+  document.body.style.overflow = val ? 'hidden' : 'auto'
 })
 </script>
 
@@ -197,7 +254,6 @@ watch(selectedExample, (val) => {
   opacity: 0;
 }
 
-/* Ensure the grid cards look clickable */
 .research-card-clickable {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }

@@ -24,7 +24,7 @@ export const researchData = {
             "id": "bwv269-original",
             "name": "BWV 269 (Original)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1TzDjytYZPZjq30Qbcdmw1t52MC_k_69r/preview",
             "url_image": "https://drive.google.com/file/d/1xY7ngfeqwicvP37AjHc5NVhBC4pCMarV/preview",
             "description": "Original score of the initial phrase of J.S. Bach's Chorale BWV 269 in G Major, demonstrating a functionally varied common-practice progression."
           },
@@ -136,17 +136,18 @@ export const researchData = {
             date: "8 July 2024",
             performance_place: "Aveiro, Portugal",
             description: "An early-stage performance showcasing a basic version of the system focused on distance-based navigation. Without a proper notation guide, the performer had to rely solely on intuition to navigate the complex sound space, which made it difficult to predict the system's response.",
+            url: "https://www.casadasciencias.org/9encontrointernacional/noite.php",
             media_links: {
-              photos: [
+              /*photos: [
                 {
                   url: "[INSERT_PHOTO_URL_HERE]",
                   description: "[TEMPLATE_DESCRIPTION: e.g., Photograph of Jorge Sousa performing with the early distance-based Aethra interface at Casa das Ciências.]"
                 }
-              ],
+              ],*/
               videos: [
                 {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Video clip showing the initial, intuitive interaction with the high-dimensional latent space.]"
+                  url: "https://www.youtube.com/embed/COPbWvbaphc?si=PP70Xxc8Vezc1GBD",
+                  description: "Video of the complete performance (audio and Touchdesigner output) at the IX Encontro Internacional da Casa das Ciências, that took place in Aveiro, Portugal, on July 8, 2024. It served as an early-stage presentation of the Echoes of the Unseen project, utilizing a basic, distance-based version of the Aethra system rather than the mature motion-aware framework. During this event, the system was utilized without a proper notation guide or 'auto-score'. As a result, the performer faced significant challenges, as they had to rely solely on their intuition to navigate the complex sound space. This lack of structural support made it difficult to predict the system's generative responses and left the performer feeling exposed to the unpredictability of the machine."
                 }
               ]
             }
@@ -157,6 +158,7 @@ export const researchData = {
             date: "1 April 2025",
             performance_place: "Albacete, Spain",
             description: "Evaluation of the preliminary system utilizing distance-based navigation. Observations from this event emphasized the need for a more refined way to interpret gestures and a structured framework to support the performer's intentions.",
+            url: "https://csmclm.com/curso/la-interpretacion-como-medio-creativo-en-la-era-post-digital/",
             media_links: {
               photos: [
                 {
@@ -164,12 +166,12 @@ export const researchData = {
                   description: "[TEMPLATE_DESCRIPTION: e.g., Image of the live setup at the Conservatorio Superior de Música.]"
                 }
               ],
-              videos: [
+              /*videos: [
                 {
                   url: "[INSERT_VIDEO_URL_HERE]",
                   description: "[TEMPLATE_DESCRIPTION: e.g., Archival footage discussing the performative challenges without an auto-score.]"
                 }
-              ]
+              ]*/
             }
           },
           {
@@ -177,20 +179,25 @@ export const researchData = {
             event: "Audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
             date: "1 July 2025",
             performance_place: "Coimbra, Portugal",
-            description: "This performance featured an upgraded system equipped with motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
+            description: "This performance featured an upgraded system equipped with musical motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
+            url: "https://amicad2025.dei.uc.pt/program.html#music-program",
             media_links: {
               photos: [
                 {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Photo capturing the introduction of the auto-score and the performer's interaction with the HMM-driven system.]"
+                  url: "https://drive.google.com/file/d/1FIH9qUx1owohfqJVTU74iOTD3_rob0qA/preview",
+                  description: "Photograph capturing the performer's initial engagement with the HMM-driven Aethra system, marking the transition from static distance-based mapping to dynamic, motion-aware navigation. Control of the electronics was still done manually with me operating the one-knob control."
+                },
+                {
+                  url: "https://drive.google.com/file/d/1qH5CH-MMh_OJgByF1afh_I0mDIbgBnJE/preview",
+                  description: "Photograph capturing the live setup of the Aethra system. Because of spatial limitations, this iteration of the performance proceeded without the real-time 2D point cloud projection, relying solely on the acoustic and gestural dialogue between the saxophonist and the machine."
                 }
               ],
-              videos: [
+              /*videos: [
                 {
                   url: "[INSERT_VIDEO_URL_HERE]",
                   description: "[TEMPLATE_DESCRIPTION: e.g., Conference presentation demonstrating the transition from distance-based to motion-aware navigation.]"
                 }
-              ]
+              ]*/
             }
           },
           {
@@ -199,17 +206,18 @@ export const researchData = {
             date: "7 July 2025",
             performance_place: "Palmela, Portugal",
             description: "Continued deployment of the motion-aware Aethra system, testing the active dialogue between the human performer and the machine utilizing the foundational auto-score.",
+            url: "https://drive.google.com/file/d/1Al8iPRiTyZh9qovQrt8VhI-3KcI05jIi/view",
             media_links: {
               photos: [
                 {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Live performance shot at the FISP festival.]"
+                  url: "https://drive.google.com/file/d/12-EB9pCnZBt958h8jKD_u96B2gHdKHce/preview",
+                  description: "Live performance shot at the FISP festival."
                 }
               ],
               videos: [
                 {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Performance excerpt displaying the system's new proactive musical agency.]"
+                  url: "https://drive.google.com/file/d/1Xa5VsiDMIGJeasGHo1fUSYOBOPQmcuap/preview",
+                  description: "Performance excerpt showcasing the system's transition into a proactive musical agent. Captured during the system's iterative development, the audible instability and clipping stem from an early setup that was later optimized as the Aethra framework reached its mature state."
                 }
               ]
             }
@@ -220,19 +228,24 @@ export const researchData = {
             date: "29 Nov 2025",
             performance_place: "Évora, Portugal",
             description: "During this performance, the system reached its current state of maturity. The integration of the one-knob control paradigm and the multimodal TouchDesigner visual interface enabled the performer to seamlessly engage in a contextual navigation of the work's universe.",
+            url: "https://dspace.uevora.pt/rdpc/bitstream/10174/39882/1/EnIM-XIV_Livro-de-Resumos-Programa.pdf",
             media_links: {
               photos: [
                 {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Image showcasing the mature TouchDesigner visual engine projected during the performance.]"
+                  url: "https://drive.google.com/file/d/1VyyvF1BtnZdtf6hnQ3BG_iEYVx1H_f3L/preview",
+                  description: "Image showcasing a demo presentation of the navigation within the system."
+                },
+                {
+                  url: "https://drive.google.com/file/d/1IzVg5SXVjwok1kEvlYVACyaDwqiIRrkT/preview",
+                  description: "Image showcasing the TouchDesigner visual engine projected during the performance as well as the performance."
                 }
               ],
-              videos: [
+              /*videos: [
                 {
                   url: "[INSERT_VIDEO_URL_HERE]",
                   description: "[TEMPLATE_DESCRIPTION: e.g., Full demonstration of the one-knob control paradigm in a live setting.]"
                 }
-              ]
+              ]*/
             }
           },
           {
@@ -241,17 +254,26 @@ export const researchData = {
             date: "11 Fev 2026",
             performance_place: "Lagoa, Portugal",
             description: "A recital that solidified Aethra as a robust, mutable interface that has officially moved past the development phase into a stable framework.",
+            url: "https://regiao-sul.pt/cultura-e-eventos/auditorio-carlos-do-carmo-acolhe-concerto-ressonancias-do-presente-de-jorge-sousa/749399",
             media_links: {
               photos: [
                 {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem.]"
+                  url: "https://drive.google.com/file/d/10rXDw0AHA1NpSfFE5o0fRWoLrRllenij/preview",
+                  description: "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
+                },
+                {
+                  url: "https://drive.google.com/file/d/1W4YXaS0iPJm7Rp7L1uc1VkB9l5oun2-z/preview",
+                  description: "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
+                },
+                {
+                  url: "https://drive.google.com/file/d/1rZXsbYiVDxisDXCOEOBuWoliqUtqtZjn/preview",
+                  description: "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
                 }
               ],
               videos: [
                 {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Live recital recording from the Auditorio Carlos do Carmo.]"
+                  url: "NOT AVAILABLE YET",
+                  description: "Live recital recording from the Auditorio Carlos do Carmo."
                 }
               ]
             }

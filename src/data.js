@@ -40,7 +40,7 @@ export const researchData = {
             "id": "bwv269-near-v01",
             "name": "BWV 269 (NEAR Strategy v=0.1)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1PwJBuPMkmXKM6S3QYC89MJuYjav_-14i/preview",
             "url_image": "https://drive.google.com/file/d/1LEtxQVLXVMYfWa4jPXKwMThRurpGcPR2/preview",
             "description": "At v=0.1, the system exhibits high structural fidelity, preserving the underlying functional syntax with only minor localized variation (e.g., substituting iii6 with vi4)."
           },
@@ -73,7 +73,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.1)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
+            "url_image": "https://drive.google.com/file/d/1Jv-r517TtTbJxsQz4Xn_ISySo9JAz2ff/preview",
             "description": "At v=0.1, the progression exhibits immediate structural divergence, establishing a new functional path (e.g., shifting from I to VI by the second chord)."
           },
           {
@@ -81,7 +81,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.5)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
+            "url_image": "https://drive.google.com/file/d/1LSTG-qUNlL_U8YSOSNR1w61wUzTKPY2C/preview",
             "description": "At v=0.5, the sustained angular displacement propels the harmony into denser, highly chromatic regions of the manifold, generating intentional momentum sonorities such as ♭II6♯53 and vii∅6543."
           },
           {
@@ -89,7 +89,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.9)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
+            "url_image": "https://drive.google.com/file/d/1HQKHiGxbfUyRfKFOmPv2bZw1eMOv5H4C/preview",
             "description": "At v=0.9, the continuous geometric extrapolation forces the sequence into a specific mathematical 'sink' or functionally ambiguous 'interstation noise' region."
           },
           {
@@ -97,7 +97,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=1.0)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
+            "url_image": "https://drive.google.com/file/d/1U2zD1C4pBDzLmTDLsE6Eq-ncnCfVzFMH/preview",
             "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
           }
         ]

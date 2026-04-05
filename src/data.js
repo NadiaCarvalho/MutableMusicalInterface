@@ -15,7 +15,7 @@ export const researchData = {
       category: "Web Platform",
       url: "https://nadiacarvalho.github.io/BroadcastJSB/",
       repo: "https://github.com/NadiaCarvalho/BroadcastJSB",
-      description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales.",
+      description: "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style",
       "study_case": {
         "name": "BWV 269",
         "description": "An evaluation of the first phrase of J.S. Bach's Chorale BWV 269 in G Major to illustrate embodied music analysis within the BroadcastJSB system. The original 15-slice progression, moving from a tonic to a dominant half cadence, acts as a baseline to explore how different sampling strategies can dynamically dismantle, preserve, or extrapolate functional syntax and tonal momentum across varying levels of spatial interference.",
@@ -48,7 +48,7 @@ export const researchData = {
             "id": "bwv269-near-v05",
             "name": "BWV 269 (NEAR Strategy v=0.5)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1Zgw2FqJqXZ2zQ_j2SOMJ_GlIeOnZx0Bo/preview",
             "url_image": "https://drive.google.com/file/d/12tnNs84u_PmAjvd2TDLdvJl7Bh0_Ysgj/preview",
             "description": "At v=0.5, a moderate spatial expansion introduces further stylistically coherent structural substitutions."
           },
@@ -56,7 +56,7 @@ export const researchData = {
             "id": "bwv269-near-v09",
             "name": "BWV 269 (NEAR Strategy v=0.9)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1gA0a5Q8DeqMmauRD-arC-TAtrkaTGwyH/preview",
             "url_image": "https://drive.google.com/file/d/1v5UH3TFhOsp_SlcUMTZ90njO8cXJTpuB/preview",
             "description": "At v=0.9, the progression grows substantially more complex, sampling dense, highly chromatic vertical sonorities (e.g., ii∅65♭3 and IV6♭5) that strictly belong to the established corpus."
           },
@@ -64,7 +64,7 @@ export const researchData = {
             "id": "bwv269-near-v10",
             "name": "BWV 269 (NEAR Strategy v=1.0)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1xYxJnsPxOr_JUazX851lzOCnenxWYIry/preview",
             "url_image": "https://drive.google.com/file/d/1yJWHRK7qzCsZyP1e1_jpkzGlBqBSmLgU/preview",
             "description": "At v=1.0, stylistic integrity completely breaks down; structural coherence dissolves, and the final cadential resolution is neutralized by functionally ambiguous, high-entropy aggregates such as ♭iii742."
           },
@@ -72,7 +72,7 @@ export const researchData = {
             "id": "bwv269-vector-v01",
             "name": "BWV 269 (VECTOR Strategy v=0.1)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1FU6gi4vYINeXzq0NwLjAW21K0eTGyoZG/preview",
             "url_image": "https://drive.google.com/file/d/1Jv-r517TtTbJxsQz4Xn_ISySo9JAz2ff/preview",
             "description": "At v=0.1, the progression exhibits immediate structural divergence, establishing a new functional path (e.g., shifting from I to VI by the second chord)."
           },
@@ -80,7 +80,7 @@ export const researchData = {
             "id": "bwv269-vector-v05",
             "name": "BWV 269 (VECTOR Strategy v=0.5)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1rOye_tejMtbAEhYPM8p0aG2EIdza2xdg/preview",
             "url_image": "https://drive.google.com/file/d/1LSTG-qUNlL_U8YSOSNR1w61wUzTKPY2C/preview",
             "description": "At v=0.5, the sustained angular displacement propels the harmony into denser, highly chromatic regions of the manifold, generating intentional momentum sonorities such as ♭II6♯53 and vii∅6543."
           },
@@ -88,7 +88,7 @@ export const researchData = {
             "id": "bwv269-vector-v09",
             "name": "BWV 269 (VECTOR Strategy v=0.9)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1Ra0_ly5uQM8RtdlmBETmndmb1cT0RCvT/preview",
             "url_image": "https://drive.google.com/file/d/1HQKHiGxbfUyRfKFOmPv2bZw1eMOv5H4C/preview",
             "description": "At v=0.9, the continuous geometric extrapolation forces the sequence into a specific mathematical 'sink' or functionally ambiguous 'interstation noise' region."
           },
@@ -96,7 +96,7 @@ export const researchData = {
             "id": "bwv269-vector-v10",
             "name": "BWV 269 (VECTOR Strategy v=1.0)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1xGDXB7J2VlbX1VrBVG778MD_8LlsQQlJ/preview",
             "url_image": "https://drive.google.com/file/d/1U2zD1C4pBDzLmTDLsE6Eq-ncnCfVzFMH/preview",
             "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
           }
@@ -112,7 +112,7 @@ export const researchData = {
       description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
       study_case: {
         name: "Echoes of the Unseen",
-        description: "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho [1]. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
+        description: "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
         examples: [
           {
             id: "audio-1",
@@ -134,7 +134,7 @@ export const researchData = {
             id: "casa-ciencias",
             event: "IX Encontro Internacional da Casa das Ciências",
             date: "8 July 2024",
-            performance_place: "Aveiro, Portugal [1]",
+            performance_place: "Aveiro, Portugal",
             description: "An early-stage performance showcasing a basic version of the system focused on distance-based navigation. Without a proper notation guide, the performer had to rely solely on intuition to navigate the complex sound space, which made it difficult to predict the system's response.",
             media_links: {
               photos: [
@@ -155,7 +155,7 @@ export const researchData = {
             id: "conservatorio-castilla",
             event: "\"La interpretación como medio creativo en la era post-digital,\" Conservatorio Superior de Música de Castilla-La Mancha",
             date: "1 April 2025",
-            performance_place: "Albacete, Spain [1]",
+            performance_place: "Albacete, Spain",
             description: "Evaluation of the preliminary system utilizing distance-based navigation. Observations from this event emphasized the need for a more refined way to interpret gestures and a structured framework to support the performer's intentions.",
             media_links: {
               photos: [
@@ -176,7 +176,7 @@ export const researchData = {
             id: "amicad",
             event: "Audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
             date: "1 July 2025",
-            performance_place: "Coimbra, Portugal [1]",
+            performance_place: "Coimbra, Portugal",
             description: "This performance featured an upgraded system equipped with motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
             media_links: {
               photos: [
@@ -197,7 +197,7 @@ export const researchData = {
             id: "fisp",
             event: "FISP - Festival Internacional de Saxofones de Palmela",
             date: "7 July 2025",
-            performance_place: "Palmela, Portugal [1]",
+            performance_place: "Palmela, Portugal",
             description: "Continued deployment of the motion-aware Aethra system, testing the active dialogue between the human performer and the machine utilizing the foundational auto-score.",
             media_links: {
               photos: [
@@ -218,7 +218,7 @@ export const researchData = {
             id: "enim",
             event: "ENIM - Encontro Nacional de Investigação em Música",
             date: "29 Nov 2025",
-            performance_place: "Évora, Portugal [1]",
+            performance_place: "Évora, Portugal",
             description: "During this performance, the system reached its current state of maturity. The integration of the one-knob control paradigm and the multimodal TouchDesigner visual interface enabled the performer to seamlessly engage in a contextual navigation of the work's universe.",
             media_links: {
               photos: [
@@ -239,7 +239,7 @@ export const researchData = {
             id: "lagoa",
             event: "\"Ressonâncias do Presente: música para saxofone e multimédia,\" Saxophone Recital, Auditorio Carlos do Carmo",
             date: "11 Fev 2026",
-            performance_place: "Lagoa, Portugal [1]",
+            performance_place: "Lagoa, Portugal",
             description: "A recital that solidified Aethra as a robust, mutable interface that has officially moved past the development phase into a stable framework.",
             media_links: {
               photos: [
@@ -260,7 +260,7 @@ export const researchData = {
             id: "recording",
             event: "Professional Studio Recording and Documentation",
             date: "Late July 2026",
-            performance_place: "Aveiro, Portugal [1]",
+            performance_place: "Aveiro, Portugal",
             description: "A planned professional studio session to thoroughly record and document the artistic and technical insights derived from the mature Echoes of the Unseen system.",
           }
         ]

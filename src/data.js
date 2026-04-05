@@ -25,15 +25,15 @@ export const researchData = {
             "name": "BWV 269 (Original)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1xY7ngfeqwicvP37AjHc5NVhBC4pCMarV/preview",
             "description": "Original score of the initial phrase of J.S. Bach's Chorale BWV 269 in G Major, demonstrating a functionally varied common-practice progression."
           },
           {
             "id": "bwv269-midpoint",
             "name": "BWV 269 (MIDPOINT Strategy)",
             "type": "video&image",
-            "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_video": "https://drive.google.com/file/d/1eD10DaPqhgjxGzlV-hWc4y0iopWpptmT/preview",
+            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
             "description": "Synthetic transition generated via the MIDPOINT (Linear Interpolation) strategy, illustrating a 'latent dead zone' where the straight-line mathematical average becomes trapped within a statistically dense subdominant cluster, neutralizing the original cadential tension."
           },
           {
@@ -41,7 +41,7 @@ export const researchData = {
             "name": "BWV 269 (NEAR Strategy v=0.1)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1LEtxQVLXVMYfWa4jPXKwMThRurpGcPR2/preview",
             "description": "At v=0.1, the system exhibits high structural fidelity, preserving the underlying functional syntax with only minor localized variation (e.g., substituting iii6 with vi4)."
           },
           {
@@ -49,7 +49,7 @@ export const researchData = {
             "name": "BWV 269 (NEAR Strategy v=0.5)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/12tnNs84u_PmAjvd2TDLdvJl7Bh0_Ysgj/preview",
             "description": "At v=0.5, a moderate spatial expansion introduces further stylistically coherent structural substitutions."
           },
           {
@@ -57,7 +57,7 @@ export const researchData = {
             "name": "BWV 269 (NEAR Strategy v=0.9)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1v5UH3TFhOsp_SlcUMTZ90njO8cXJTpuB/preview",
             "description": "At v=0.9, the progression grows substantially more complex, sampling dense, highly chromatic vertical sonorities (e.g., ii∅65♭3 and IV6♭5) that strictly belong to the established corpus."
           },
           {
@@ -65,7 +65,7 @@ export const researchData = {
             "name": "BWV 269 (NEAR Strategy v=1.0)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1yJWHRK7qzCsZyP1e1_jpkzGlBqBSmLgU/preview",
             "description": "At v=1.0, stylistic integrity completely breaks down; structural coherence dissolves, and the final cadential resolution is neutralized by functionally ambiguous, high-entropy aggregates such as ♭iii742."
           },
           {
@@ -73,7 +73,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.1)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
             "description": "At v=0.1, the progression exhibits immediate structural divergence, establishing a new functional path (e.g., shifting from I to VI by the second chord)."
           },
           {
@@ -81,7 +81,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.5)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
             "description": "At v=0.5, the sustained angular displacement propels the harmony into denser, highly chromatic regions of the manifold, generating intentional momentum sonorities such as ♭II6♯53 and vii∅6543."
           },
           {
@@ -89,7 +89,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=0.9)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
             "description": "At v=0.9, the continuous geometric extrapolation forces the sequence into a specific mathematical 'sink' or functionally ambiguous 'interstation noise' region."
           },
           {
@@ -97,7 +97,7 @@ export const researchData = {
             "name": "BWV 269 (VECTOR Strategy v=1.0)",
             "type": "video&image",
             "url_video": "[INSERT_VIDEO_URL_HERE]",
-            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
             "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
           }
         ]

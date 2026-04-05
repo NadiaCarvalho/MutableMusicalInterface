@@ -5,21 +5,107 @@ export const researchData = {
   university: "FEUP / INESC TEC",
   year: "2026",
   githubCollection: "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
-  
+
   // Artifacts includes Apps, Subapps, and Datasets for the ArtifactGrid component
   artifacts: [
-    { 
+    {
       id: "broadcast-jsb",
-      name: "BroadcastJSB", 
+      name: "BroadcastJSB",
       pillar: "Tonal",
       category: "Web Platform",
-      url: "https://nadiacarvalho.github.io/BroadcastJSB/", 
+      url: "https://nadiacarvalho.github.io/BroadcastJSB/",
       repo: "https://github.com/NadiaCarvalho/BroadcastJSB",
-      description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales."
+      description: "A topological instrument using a radio metaphor to navigate the latent space of J.S. Bach chorales.",
+      "study_case": {
+        "name": "BWV 269",
+        "description": "An evaluation of the first phrase of J.S. Bach's Chorale BWV 269 in G Major to illustrate embodied music analysis within the BroadcastJSB system. The original 15-slice progression, moving from a tonic to a dominant half cadence, acts as a baseline to explore how different sampling strategies can dynamically dismantle, preserve, or extrapolate functional syntax and tonal momentum across varying levels of spatial interference.",
+        "examples": [
+          {
+            "id": "bwv269-original",
+            "name": "BWV 269 (Original)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "Original score of the initial phrase of J.S. Bach's Chorale BWV 269 in G Major, demonstrating a functionally varied common-practice progression."
+          },
+          {
+            "id": "bwv269-midpoint",
+            "name": "BWV 269 (MIDPOINT Strategy)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "Synthetic transition generated via the MIDPOINT (Linear Interpolation) strategy, illustrating a 'latent dead zone' where the straight-line mathematical average becomes trapped within a statistically dense subdominant cluster, neutralizing the original cadential tension."
+          },
+          {
+            "id": "bwv269-near-v01",
+            "name": "BWV 269 (NEAR Strategy v=0.1)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.1, the system exhibits high structural fidelity, preserving the underlying functional syntax with only minor localized variation (e.g., substituting iii6 with vi4)."
+          },
+          {
+            "id": "bwv269-near-v05",
+            "name": "BWV 269 (NEAR Strategy v=0.5)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.5, a moderate spatial expansion introduces further stylistically coherent structural substitutions."
+          },
+          {
+            "id": "bwv269-near-v09",
+            "name": "BWV 269 (NEAR Strategy v=0.9)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.9, the progression grows substantially more complex, sampling dense, highly chromatic vertical sonorities (e.g., ii∅65♭3 and IV6♭5) that strictly belong to the established corpus."
+          },
+          {
+            "id": "bwv269-near-v10",
+            "name": "BWV 269 (NEAR Strategy v=1.0)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=1.0, stylistic integrity completely breaks down; structural coherence dissolves, and the final cadential resolution is neutralized by functionally ambiguous, high-entropy aggregates such as ♭iii742."
+          },
+          {
+            "id": "bwv269-vector-v01",
+            "name": "BWV 269 (VECTOR Strategy v=0.1)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.1, the progression exhibits immediate structural divergence, establishing a new functional path (e.g., shifting from I to VI by the second chord)."
+          },
+          {
+            "id": "bwv269-vector-v05",
+            "name": "BWV 269 (VECTOR Strategy v=0.5)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.5, the sustained angular displacement propels the harmony into denser, highly chromatic regions of the manifold, generating intentional momentum sonorities such as ♭II6♯53 and vii∅6543."
+          },
+          {
+            "id": "bwv269-vector-v09",
+            "name": "BWV 269 (VECTOR Strategy v=0.9)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=0.9, the continuous geometric extrapolation forces the sequence into a specific mathematical 'sink' or functionally ambiguous 'interstation noise' region."
+          },
+          {
+            "id": "bwv269-vector-v10",
+            "name": "BWV 269 (VECTOR Strategy v=1.0)",
+            "type": "video&image",
+            "url_video": "[INSERT_VIDEO_URL_HERE]",
+            "url_image": "[INSERT_IMAGE_URL_HERE]",
+            "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
+          }
+        ]
+      }
     },
-    { 
+    {
       id: "aethra",
-      name: "Aethra", 
+      name: "Aethra",
       pillar: "Timbre",
       category: "PD patch + Py4PD scripts",
       repo: "https://github.com/NadiaCarvalho/Aethra",
@@ -28,7 +114,7 @@ export const researchData = {
         name: "Echoes of the Unseen",
         description: "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho [1]. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
         examples: [
-          { 
+          {
             id: "audio-1",
             name: "TEMPLATE AUDIO",
             type: "audio",
@@ -180,39 +266,39 @@ export const researchData = {
         ]
       }
     },
-    { 
+    {
       id: "bach-latent-navigator",
-      name: "Bach Latent Navigator", 
+      name: "Bach Latent Navigator",
       pillar: "Tonal",
       category: "Web Platform",
-      url: "https://nadiacarvalho.github.io/BachLatentNavigator/", 
+      url: "https://nadiacarvalho.github.io/BachLatentNavigator/",
       repo: "https://github.com/NadiaCarvalho/BachLatentNavigator",
       description: "Evaluation platform for sampling strategies (k-NN vs Linear Interpolation) in music manifolds."
     },
-    { 
+    {
       id: "encodings-tonal",
-      name: "Tonal Music Encodings", 
+      name: "Tonal Music Encodings",
       pillar: "Tonal",
       category: "Web Platform",
-      url: "https://nadiacarvalho.github.io/Latent-Tonal-Music/", 
+      url: "https://nadiacarvalho.github.io/Latent-Tonal-Music/",
       repo: "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
       description: "Interactive exploration of latent behavior and geometric properties of symbolic music encodings."
     },
-    { 
+    {
       id: "motiv-dataset",
-      name: "Motiv Dataset", 
+      name: "Motiv Dataset",
       pillar: "Timbre",
       category: "Dataset",
-      doi: "10.7910/DVN/RWCG4B", 
-      description: "Trajectory dataset of saxophonic musical phrases and latent motion representations." 
+      doi: "10.7910/DVN/RWCG4B",
+      description: "Trajectory dataset of saxophonic musical phrases and latent motion representations."
     },
-    { 
+    {
       id: "saxtimbre-dataset",
-      name: "SaxTimbre", 
+      name: "SaxTimbre",
       pillar: "Timbre",
       category: "Dataset",
-      doi: "10.7910/DVN/WSFBIJ", 
-      description: "Comprehensive dataset of tenor saxophone extended techniques for RAVE model training." 
+      doi: "10.7910/DVN/WSFBIJ",
+      description: "Comprehensive dataset of tenor saxophone extended techniques for RAVE model training."
     }
   ],
 

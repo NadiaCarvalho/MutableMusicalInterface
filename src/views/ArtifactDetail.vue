@@ -170,6 +170,157 @@
     </div>
 
     <Teleport to="body">
+      <Transition name="fade">
+        <div v-if="selectedContent" class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+          <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-md" @click="closeModal"></div>
+
+          <div
+            class="relative bg-white w-full max-w-6xl max-h-[92vh] overflow-y-auto rounded-[2.5rem] shadow-2xl no-scrollbar">
+            <button @click="closeModal"
+              class="fixed md:absolute top-6 right-6 z-[110] w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center hover:bg-indigo-600 hover:text-white transition-all text-xl">✕</button>
+
+            <div class="p-8 md:p-16">
+              <header class="mb-12 max-w-3xl">
+                <!-- beautify ignore:start -->
+                <span
+                  class="text-xs font-bold text-indigo-600 uppercase tracking-widest px-3 py-1 bg-indigo-50 rounded-full">
+                  {{ contentType === 'performance' ? 'Performance Documentation' : selectedContent.type?.replace('&', ' + ') }}
+                </span>
+                <!-- beautify ignore:stop -->
+                <h3 class="text-4xl font-black text-slate-900 mt-6 leading-tight">{{ contentType === 'performance' ?
+    selectedContent.event : selectedContent.name }}</h3>
+                <p class="text-lg text-slate-500 mt-4 leading-relaxed">{{ contentType === 'performance' ?
+    selectedContent.performance_place : selectedContent.description }}</p>
+              </header>
+
+              <div v-if="contentType === 'performance'" class="space-y-16">
+                <div v-if="selectedContent.media_links?.photos?.length" class="space-y-8 text-center">
+                  <h4 class="text-sm font-black text-slate-300 uppercase tracking-widest">Photographic Documentation
+                  </h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div v-for="(photo, i) in selectedContent.media_links.photos" :key="i"
+                      class="max-w-5xl rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+                      <div class="aspect-video bg-white flex items-center justify-center overflow-hidden">
+                        <iframe v-if="photo.url?.includes('drive.google')" :src="photo.url" class="w-full h-full"
+                          frameborder="0"></iframe>
+                        <img v-else :src="photo.url" class="w-full h-full object-contain" />
+                      </div>
+                      <div class="p-6 text-left">
+                        <p class="text-sm text-slate-500 italic">{{ photo.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div v-if="selectedContent.media_links?.videos?.length" class="space-y-8 text-center">
+                  <h4 class="text-sm font-black text-slate-300 uppercase tracking-widest">Video Recordings</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div v-for="(vid, i) in selectedContent.media_links.videos" :key="i" class="max-w-5xl space-y-4">
+                      <div class="aspect-video rounded-2xl overflow-hidden bg-black shadow-xl">
+                        <iframe
+                          v-if="vid.url?.includes('youtube') || vid.url?.includes('drive.google') || vid.url?.includes('vimeo')"
+                          :src="vid.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                        <video v-else controls :src="vid.url" class="w-full h-full object-cover"></video>
+                      </div>
+                      <p class="text-sm text-slate-500 text-left px-2">{{ vid.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div v-else-if="contentType === 'example'">
+                <div v-if="selectedContent.type === 'video&image'" class="grid lg:grid-cols-2 gap-10 items-start">
+                  <div
+                    class="aspect-video lg:aspect-[3/4] rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 shadow-inner flex items-center justify-center">
+                    <iframe v-if="selectedContent.url_image?.includes('drive.google')" :src="selectedContent.url_image"
+                      class="w-full h-full" frameborder="0"></iframe>
+                    <img v-else :src="selectedContent.url_image" class="max-w-full max-h-full object-contain" />
+                  </div>
+                  <div class="aspect-video lg:aspect-[3/4] rounded-2xl overflow-hidden bg-black shadow-2xl">
+                    <iframe
+                      v-if="selectedContent.url_video?.includes('youtube') || selectedContent.url_video?.includes('vimeo') || selectedContent.url_video?.includes('drive.google')"
+                      :src="selectedContent.url_video" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                    <video v-else controls :src="selectedContent.url_video" class="w-full h-full object-cover"></video>
+                  </div>
+                </div>
+
+                <div v-else-if="selectedContent.type === 'video'"
+                  class="max-w-5xl mx-auto aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl">
+                  <iframe
+                    v-if="selectedContent.url?.includes('youtube') || selectedContent.url?.includes('vimeo') || selectedContent.url?.includes('drive.google')"
+                    :src="selectedContent.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                  <video v-else controls :src="selectedContent.url" class="w-full h-full object-cover"></video>
+                </div>
+
+                <div v-else-if="selectedContent.type === 'image'"
+                  class="max-w-5xl mx-auto aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl">
+                  <iframe
+                    v-if="selectedContent.url?.includes('youtube') || selectedContent.url?.includes('vimeo') || selectedContent.url?.includes('drive.google')"
+                    :src="selectedContent.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                  <img v-else :src="selectedContent.url" class="w-full h-full mb-6"/>
+                  <p class="text-slate-400 text-sm font-mono tracking-tighter">Source: {{ selectedContent.url }}</p>
+                </div>
+
+                <div v-else-if="selectedContent.type === 'audio'"
+                  class="max-w-5xl mx-auto aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl">
+                  <iframe
+                    v-if="selectedContent.url?.includes('youtube') || selectedContent.url?.includes('vimeo') || selectedContent.url?.includes('drive.google')"
+                    :src="selectedContent.url" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                  <audio v-else controls :src="selectedContent.url" class="w-full h-14 mb-6"></audio>
+                  <p class="text-slate-400 text-sm font-mono tracking-tighter">Source: {{ selectedContent.url }}</p>
+                </div>
+
+                <div v-else-if="selectedContent.type === 'audioTable'" class="mt-8">
+                  <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white">
+                    <table class="w-full border-collapse text-sm">
+                      <thead>
+                        <tr class="bg-slate-50/80">
+                          <th class="border-b border-r border-slate-200 p-4 w-32"></th>
+                          <th v-for="header in selectedContent.tableData.headers" :key="header.label"
+                            :colspan="header.span"
+                            class="border-b border-r border-slate-200 p-3 text-slate-700 font-bold text-center text-[11px] uppercase tracking-wider">
+                            {{ header.label }}
+                          </th>
+                        </tr>
+                        <tr class="bg-white">
+                          <th class="border-b border-r border-slate-200 p-2"></th>
+                          <th v-for="(sub, sIdx) in getFlattenedSubheaders(selectedContent.tableData.headers)"
+                            :key="sIdx"
+                            class="border-b border-r border-slate-200 p-2 text-slate-400 font-medium text-center text-[10px]">
+                            {{ sub }}
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="row in selectedContent.tableData.rows" :key="row.instrument"
+                          class="group hover:bg-indigo-50/20 transition-colors">
+                          <td class="border-b border-r border-slate-200 p-4 font-bold text-slate-800 bg-slate-50/30">
+                            {{ row.instrument }}
+                          </td>
+                          <td v-for="(file, fIndex) in row.files" :key="fIndex"
+                            class="border-b border-r border-slate-200 p-3 text-center">
+                            <button @click="toggleAudio(file)"
+                              class="w-10 h-10 rounded-full flex items-center justify-center mx-auto transition-all duration-200 shadow-sm border border-slate-200"
+                              :class="currentPlayingUrl === file
+    ? 'bg-indigo-600 text-white border-indigo-600 scale-110'
+    : 'bg-slate-50 text-slate-400 hover:bg-white hover:text-indigo-600 hover:border-indigo-200'">
+                              <span v-if="currentPlayingUrl === file" class="text-[8px] animate-pulse">■</span>
+                              <span v-else class="text-[10px] ml-0.5">▶</span>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="mt-4 text-center text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                    Latent space comparison matrix
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
     </Teleport>
   </div>
 </template>

@@ -110,16 +110,74 @@ export const researchData = {
       category: "PD patch + Py4PD scripts",
       repo: "https://github.com/NadiaCarvalho/Aethra",
       description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
+      media_documentation: [
+        {
+          name: "demo-1",
+          name: "Demo 1",
+          type: "video",
+          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+          description: "Demo 1."
+        },
+        {
+          name: "demo-2",
+          name: "Demo 2",
+          type: "video",
+          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+          description: "Demo 2."
+        },
+        {
+          name: "demo-3",
+          name: "Demo 3",
+          type: "video",
+          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+          description: "Demo 3."
+        },
+        {
+          name: "demo-4",
+          name: "Demo 4",
+          type: "video",
+          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+          description: "Demo 4."
+        },
+      ],
       study_cases: [{
         name: "Echoes of the Unseen",
         description: "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
         examples: [
           {
-            id: "audio-1",
-            name: "TEMPLATE AUDIO",
+            id: "lamento",
+            name: "Lamento by Jesús Villa-Rojo (1989)",
+            type: "video",
+            url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+            description: "Audio of Lamento by Jesús Villa-Rojo (1989)."
+          },
+          {
+            id: "echoes-tape",
+            name: "Tape",
             type: "audio",
-            url: "[INSERT_AUDIO_URL_HERE]",
-            description: "[TEMPLATE_DESCRIPTION: e.g., Audio of Bla Bla.]"
+            url: "https://drive.google.com/file/d/10g6MlatSOue9M9BjEtJ01fXgXdFsubLE/preview",
+            description: "Audio of prepared tape for Echoes of the Unseen."
+          },
+          {
+            id: "auto-score",
+            name: "Score",
+            type: "image",
+            url: "https://drive.google.com/file/d/1oKis72Ga2yUvbrDN2HlYg0VwAie_rZ2F/preview",
+            description: "Auto-score."
+          },
+          {
+            id: "stage",
+            name: "Stage Setup",
+            type: "image",
+            url: "https://drive.google.com/file/d/1KOCs0e8au7P48i7A3iee-ikrVlzAQNLW/preview",
+            description: "Technical Rider for Echoes of the Unseen."
+          },
+          /*{
+            name: "demo-preset-1",
+            name: "Demo Preset 1",
+            type: "video",
+            url: "[INSERT_VIDEO_URL_HERE]",
+            description: "[TEMPLATE_DESCRIPTION: e.g., Video of Bla Bla.]"
           },
           {
             id: "video-1",
@@ -127,7 +185,7 @@ export const researchData = {
             type: "video",
             url: "[INSERT_VIDEO_URL_HERE]",
             description: "[TEMPLATE_DESCRIPTION: e.g., Video of Bla Bla.]"
-          }
+          }*/
         ],
         performances: [
           {
@@ -170,7 +228,7 @@ export const researchData = {
           },
           {
             id: "amicad",
-            event: "/audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
+            event: "Audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
             date: "1 July 2025",
             performance_place: "Coimbra, Portugal",
             description: "This performance featured an upgraded system equipped with musical motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
@@ -296,7 +354,7 @@ export const researchData = {
                   description: "",
                   files: [
                     "/audio/Guitar-01.wav",
-                    "/audio/Guitar-02.wav", 
+                    "/audio/Guitar-02.wav",
                     "/audio/Guitar-03.wav",
                     "/audio/Guitar-04.wav",
                     "/audio/Guitar-05.wav",

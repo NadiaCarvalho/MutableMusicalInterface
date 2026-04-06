@@ -16,7 +16,7 @@ export const researchData = {
       url: "https://nadiacarvalho.github.io/BroadcastJSB/",
       repo: "https://github.com/NadiaCarvalho/BroadcastJSB",
       description: "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style",
-      "study_case": {
+      study_cases: [{
         "name": "BWV 269",
         "description": "An evaluation of the first phrase of J.S. Bach's Chorale BWV 269 in G Major to illustrate embodied music analysis within the BroadcastJSB system. The original 15-slice progression, moving from a tonic to a dominant half cadence, acts as a baseline to explore how different sampling strategies can dynamically dismantle, preserve, or extrapolate functional syntax and tonal momentum across varying levels of spatial interference.",
         "examples": [
@@ -101,7 +101,7 @@ export const researchData = {
             "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
           }
         ]
-      }
+      }]
     },
     {
       id: "aethra",
@@ -110,7 +110,7 @@ export const researchData = {
       category: "PD patch + Py4PD scripts",
       repo: "https://github.com/NadiaCarvalho/Aethra",
       description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
-      study_case: {
+      study_cases: [{
         name: "Echoes of the Unseen",
         description: "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
         examples: [
@@ -138,12 +138,6 @@ export const researchData = {
             description: "An early-stage performance showcasing a basic version of the system focused on distance-based navigation. Without a proper notation guide, the performer had to rely solely on intuition to navigate the complex sound space, which made it difficult to predict the system's response.",
             url: "https://www.casadasciencias.org/9encontrointernacional/noite.php",
             media_links: {
-              /*photos: [
-                {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Photograph of Jorge Sousa performing with the early distance-based Aethra interface at Casa das Ciências.]"
-                }
-              ],*/
               videos: [
                 {
                   url: "https://www.youtube.com/embed/COPbWvbaphc?si=PP70Xxc8Vezc1GBD",
@@ -162,21 +156,21 @@ export const researchData = {
             media_links: {
               photos: [
                 {
-                  url: "[INSERT_PHOTO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Image of the live setup at the Conservatorio Superior de Música.]"
+                  url: "https://drive.google.com/file/d/1zEvksZYTvv_0626enqN40ziuGA2OFSof/preview",
+                  description: "Image of the live setup at the Conservatorio Superior de Música de Castilla-La Mancha."
                 }
               ],
-              /*videos: [
+              videos: [
                 {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Archival footage discussing the performative challenges without an auto-score.]"
+                  url: "https://drive.google.com/file/d/19CdJRkFDaP0CFDaLRiK2B5NZtVCufFG2/preview",
+                  description: "Performance excerpt showcasing a preliminary version of the Aethra system utilizing distance-based navigation. Recorded during the early evaluations at the Conservatorio Superior de Música de Castilla-La Mancha on April 1, 2025, this trial highlights the performer's completely intuitive interaction with the high-dimensional latent space."
                 }
-              ]*/
+              ]
             }
           },
           {
             id: "amicad",
-            event: "Audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
+            event: "/audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
             date: "1 July 2025",
             performance_place: "Coimbra, Portugal",
             description: "This performance featured an upgraded system equipped with musical motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
@@ -192,12 +186,6 @@ export const researchData = {
                   description: "Photograph capturing the live setup of the Aethra system. Because of spatial limitations, this iteration of the performance proceeded without the real-time 2D point cloud projection, relying solely on the acoustic and gestural dialogue between the saxophonist and the machine."
                 }
               ],
-              /*videos: [
-                {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Conference presentation demonstrating the transition from distance-based to motion-aware navigation.]"
-                }
-              ]*/
             }
           },
           {
@@ -240,12 +228,6 @@ export const researchData = {
                   description: "Image showcasing the TouchDesigner visual engine projected during the performance as well as the performance."
                 }
               ],
-              /*videos: [
-                {
-                  url: "[INSERT_VIDEO_URL_HERE]",
-                  description: "[TEMPLATE_DESCRIPTION: e.g., Full demonstration of the one-knob control paradigm in a live setting.]"
-                }
-              ]*/
             }
           },
           {
@@ -286,7 +268,87 @@ export const researchData = {
             description: "A planned professional studio session to thoroughly record and document the artistic and technical insights derived from the mature Echoes of the Unseen system.",
           }
         ]
-      }
+      }, {
+        name: "Jazz-based Preliminary Examples",
+        description: "This exploratory case study investigates the expansion of the Aethra system's stylistic adaptability beyond the contemporary electroacoustic domain and into the realm of jazz improvisation. he research utilized four solo instrumental recordings of jazz standards—featuring guitar, tenor saxophone, trumpet, and piano—to evaluate how Aethra's distance-based and motion-enhanced navigation frameworks could support the characteristic idiomatic patterns of jazz. Initial listening tests demonstrated that the hybrid navigation framework effectively maintained the stylistic coherence and structural integrity of the jazz vocabulary.",
+        examples: [
+          {
+            id: "video-1",
+            name: "Aethra and Redman",
+            type: "video",
+            url: "https://drive.google.com/file/d/1SmxDA-3eXUyGgdC3Rp6NJq9MRW1j4M4C/preview",
+            description: "Video of Aethra usage with a Joshua Redman's 2-minute solo improvisation."
+          },
+          {
+            id: "evaluation-table",
+            name: "Navigation Strategy Comparison using Jazz Examples",
+            type: "audioTable",
+            description: "Comparative analysis of kNN distance-based vs HMM motion-based sampling.",
+            tableData: {
+              headers: [
+                { label: "Original", span: 1 },
+                { label: "Distance-based (kNN)", span: 3, subLabels: [".2", ".5", ".9"] },
+                { label: "Motion-based (HMM)", span: 3, subLabels: ["Parallel", "Oblique", "Contrary"] }
+              ],
+              rows: [
+                {
+                  instrument: "Guitar",
+                  description: "",
+                  files: [
+                    "/audio/Guitar-01.wav",
+                    "/audio/Guitar-02.wav", 
+                    "/audio/Guitar-03.wav",
+                    "/audio/Guitar-04.wav",
+                    "/audio/Guitar-05.wav",
+                    "/audio/Guitar-06.wav",
+                    "/audio/Guitar-07.wav",
+                  ]
+                },
+                {
+                  instrument: "Piano",
+                  description: "",
+                  files: [
+                    "/audio/Piano-01.wav",
+                    "/audio/Piano-02.wav",
+                    "/audio/Piano-03.wav",
+                    "/audio/Piano-04.wav",
+                    "/audio/Piano-05.wav",
+                    "/audio/Piano-06.wav",
+                    "/audio/Piano-07.wav",
+                  ]
+                },
+                {
+                  instrument: "Sax",
+                  description: "",
+                  files: [
+                    "/audio/Sax-01.wav",
+                    "/audio/Sax-02.wav",
+                    "/audio/Sax-03.wav",
+                    "/audio/Sax-04.wav",
+                    "/audio/Sax-05.wav",
+                    "/audio/Sax-06.wav",
+                    "/audio/Sax-07.wav",
+                  ]
+                },
+                {
+                  instrument: "Trumpet",
+                  description: "",
+                  files: [
+                    "/audio/Trumpet-01.wav",
+                    "/audio/Trumpet-02.wav",
+                    "/audio/Trumpet-03.wav",
+                    "/audio/Trumpet-04.wav",
+                    "/audio/Trumpet-05.wav",
+                    "/audio/Trumpet-06.wav",
+                    "/audio/Trumpet-07.wav",
+                  ]
+                },
+              ]
+            }
+          },
+
+        ],
+      }]
     },
     {
       id: "bach-latent-navigator",

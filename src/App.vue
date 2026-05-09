@@ -54,12 +54,12 @@ import { researchData as data } from './data.js'
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const items = ref([])
+const data = ref([])
 const loading = ref(true)
 const error = ref(null)
 
 // The URL where your external JSON is hosted
-const dataUrl = 'https://your-external-host.com/path/to/data.json'
+const dataUrl = 'https://github.com/NadiaCarvalho/MutableMusicalInterface/blob/main/src/data.json'
 
 onMounted(async () => {
   try {
@@ -68,7 +68,7 @@ onMounted(async () => {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
     const jsonData = await response.json()
-    items.value = jsonData // Assign the fetched data to your Vue state
+    data.value = jsonData // Assign the fetched data to your Vue state
   } catch (err) {
     console.error("Failed to fetch data:", err)
     error.value = "Could not load data."

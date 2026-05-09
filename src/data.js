@@ -112,33 +112,20 @@ export const researchData = {
       description: "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
       media_documentation: [
         {
-          name: "demo-1",
+          id: "aethra-config-initialization-demo",
           name: "Demo 1",
           type: "video",
-          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
-          description: "Demo 1."
+          url: "https://drive.google.com/file/d/1hRC_xxlblWpUtGOzM123xDOK19u7zJDa/preview",
+          description: "A demonstration of loading a configuration file into Aethra's Pure Data interface, showcasing the configuration parser automating the retrieval of audio source file paths, saved latent vectors (.pkl files), and HMM transition models to enable smooth real-time playback and synthesis."
         },
-        {
-          name: "demo-2",
+        /*{
+          id: "demo-2",
           name: "Demo 2",
           type: "video",
           url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
           description: "Demo 2."
         },
-        {
-          name: "demo-3",
-          name: "Demo 3",
-          type: "video",
-          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
-          description: "Demo 3."
-        },
-        {
-          name: "demo-4",
-          name: "Demo 4",
-          type: "video",
-          url: "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
-          description: "Demo 4."
-        },
+        */
       ],
       study_cases: [{
         name: "Echoes of the Unseen",
@@ -173,7 +160,7 @@ export const researchData = {
             description: "Technical Rider for Echoes of the Unseen."
           },
           /*{
-            name: "demo-preset-1",
+            id: "demo-preset-1",
             name: "Demo Preset 1",
             type: "video",
             url: "[INSERT_VIDEO_URL_HERE]",

@@ -1,0 +1,506 @@
+{
+    "title": "The Musical Work as a Mutable Interface",
+    "subtitle": "Towards a Co-Creative Electroacoustic Practice",
+    "author": "Nádia Carvalho",
+    "university": "FEUP / INESC TEC",
+    "year": "2026",
+    "githubCollection": "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
+    "artifacts": [
+      {
+        "id": "broadcast-jsb",
+        "name": "BroadcastJSB",
+        "pillar": "Tonal",
+        "category": "Web Platform",
+        "url": "https://nadiacarvalho.github.io/BroadcastJSB/",
+        "repo": "https://github.com/NadiaCarvalho/BroadcastJSB",
+        "description": "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style",
+        "study_cases": [
+          {
+            "name": "BWV 269",
+            "description": "An evaluation of the first phrase of J.S. Bach's Chorale BWV 269 in G Major to illustrate embodied music analysis within the BroadcastJSB system. The original 15-slice progression, moving from a tonic to a dominant half cadence, acts as a baseline to explore how different sampling strategies can dynamically dismantle, preserve, or extrapolate functional syntax and tonal momentum across varying levels of spatial interference.",
+            "examples": [
+              {
+                "id": "bwv269-original",
+                "name": "BWV 269 (Original)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1TzDjytYZPZjq30Qbcdmw1t52MC_k_69r/preview",
+                "url_image": "https://drive.google.com/file/d/1xY7ngfeqwicvP37AjHc5NVhBC4pCMarV/preview",
+                "description": "Original score of the initial phrase of J.S. Bach's Chorale BWV 269 in G Major, demonstrating a functionally varied common-practice progression."
+              },
+              {
+                "id": "bwv269-midpoint",
+                "name": "BWV 269 (MIDPOINT Strategy)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1eD10DaPqhgjxGzlV-hWc4y0iopWpptmT/preview",
+                "url_image": "https://drive.google.com/file/d/1W3ACF_5OQhPZ-T8ABd3d8MhjSdZvqigd/preview",
+                "description": "Synthetic transition generated via the MIDPOINT (Linear Interpolation) strategy, illustrating a 'latent dead zone' where the straight-line mathematical average becomes trapped within a statistically dense subdominant cluster, neutralizing the original cadential tension."
+              },
+              {
+                "id": "bwv269-near-v01",
+                "name": "BWV 269 (NEAR Strategy v=0.1)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1PwJBuPMkmXKM6S3QYC89MJuYjav_-14i/preview",
+                "url_image": "https://drive.google.com/file/d/1LEtxQVLXVMYfWa4jPXKwMThRurpGcPR2/preview",
+                "description": "At v=0.1, the system exhibits high structural fidelity, preserving the underlying functional syntax with only minor localized variation (e.g., substituting iii6 with vi4)."
+              },
+              {
+                "id": "bwv269-near-v05",
+                "name": "BWV 269 (NEAR Strategy v=0.5)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1Zgw2FqJqXZ2zQ_j2SOMJ_GlIeOnZx0Bo/preview",
+                "url_image": "https://drive.google.com/file/d/12tnNs84u_PmAjvd2TDLdvJl7Bh0_Ysgj/preview",
+                "description": "At v=0.5, a moderate spatial expansion introduces further stylistically coherent structural substitutions."
+              },
+              {
+                "id": "bwv269-near-v09",
+                "name": "BWV 269 (NEAR Strategy v=0.9)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1gA0a5Q8DeqMmauRD-arC-TAtrkaTGwyH/preview",
+                "url_image": "https://drive.google.com/file/d/1v5UH3TFhOsp_SlcUMTZ90njO8cXJTpuB/preview",
+                "description": "At v=0.9, the progression grows substantially more complex, sampling dense, highly chromatic vertical sonorities (e.g., ii∅65♭3 and IV6♭5) that strictly belong to the established corpus."
+              },
+              {
+                "id": "bwv269-near-v10",
+                "name": "BWV 269 (NEAR Strategy v=1.0)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1xYxJnsPxOr_JUazX851lzOCnenxWYIry/preview",
+                "url_image": "https://drive.google.com/file/d/1yJWHRK7qzCsZyP1e1_jpkzGlBqBSmLgU/preview",
+                "description": "At v=1.0, stylistic integrity completely breaks down; structural coherence dissolves, and the final cadential resolution is neutralized by functionally ambiguous, high-entropy aggregates such as ♭iii742."
+              },
+              {
+                "id": "bwv269-vector-v01",
+                "name": "BWV 269 (VECTOR Strategy v=0.1)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1FU6gi4vYINeXzq0NwLjAW21K0eTGyoZG/preview",
+                "url_image": "https://drive.google.com/file/d/1Jv-r517TtTbJxsQz4Xn_ISySo9JAz2ff/preview",
+                "description": "At v=0.1, the progression exhibits immediate structural divergence, establishing a new functional path (e.g., shifting from I to VI by the second chord)."
+              },
+              {
+                "id": "bwv269-vector-v05",
+                "name": "BWV 269 (VECTOR Strategy v=0.5)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1rOye_tejMtbAEhYPM8p0aG2EIdza2xdg/preview",
+                "url_image": "https://drive.google.com/file/d/1LSTG-qUNlL_U8YSOSNR1w61wUzTKPY2C/preview",
+                "description": "At v=0.5, the sustained angular displacement propels the harmony into denser, highly chromatic regions of the manifold, generating intentional momentum sonorities such as ♭II6♯53 and vii∅6543."
+              },
+              {
+                "id": "bwv269-vector-v09",
+                "name": "BWV 269 (VECTOR Strategy v=0.9)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1Ra0_ly5uQM8RtdlmBETmndmb1cT0RCvT/preview",
+                "url_image": "https://drive.google.com/file/d/1HQKHiGxbfUyRfKFOmPv2bZw1eMOv5H4C/preview",
+                "description": "At v=0.9, the continuous geometric extrapolation forces the sequence into a specific mathematical 'sink' or functionally ambiguous 'interstation noise' region."
+              },
+              {
+                "id": "bwv269-vector-v10",
+                "name": "BWV 269 (VECTOR Strategy v=1.0)",
+                "type": "video&image",
+                "url_video": "https://drive.google.com/file/d/1xGDXB7J2VlbX1VrBVG778MD_8LlsQQlJ/preview",
+                "url_image": "https://drive.google.com/file/d/1U2zD1C4pBDzLmTDLsE6Eq-ncnCfVzFMH/preview",
+                "description": "At v=1.0, the trajectory reliably converges on the high-entropy aggregate ♯vi◦♭642, fully dissolving the traditional boundaries of the established diatonic grammar."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "aethra",
+        "name": "Aethra",
+        "pillar": "Timbre",
+        "category": "PD patch + Py4PD scripts",
+        "repo": "https://github.com/NadiaCarvalho/Aethra",
+        "description": "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
+        "media_documentation": [
+          {
+            "id": "aethra-config-initialization-demo",
+            "name": "Demo 1",
+            "type": "video",
+            "url": "https://drive.google.com/file/d/1hRC_xxlblWpUtGOzM123xDOK19u7zJDa/preview",
+            "description": "A demonstration of loading a configuration file into Aethra's Pure Data interface, showcasing the configuration parser automating the retrieval of audio source file paths, saved latent vectors (.pkl files), and HMM transition models to enable smooth real-time playback and synthesis."
+          }
+        ],
+        "study_cases": [
+          {
+            "name": "Echoes of the Unseen",
+            "description": "Echoes of the Unseen is a 10-minute AI-mediated co-improvisation for tenor saxophone and live electronics, conceived and performed by Jorge Sousa and Nádia Carvalho. The work explores the boundaries of AI-driven improvisational music by utilizing the Aethra system to navigate timbre latent spaces, building upon a remixed pre-recorded track based on Jesús Villa-Rojo’s Lamento (1989). To manage the vulnerability of free improvisation, the performance is guided by an 'auto-score' and structured around a one-knob control paradigm (the closeness parameter), which dictates the system's fidelity to the original audio. Furthermore, the performance incorporates a visual engine developed in TouchDesigner, which projects the system's algorithmic navigation as a 2D point cloud to serve as a cognitive bridge for the audience.",
+            "examples": [
+              {
+                "id": "lamento",
+                "name": "Lamento by Jesús Villa-Rojo (1989)",
+                "type": "video",
+                "url": "https://www.youtube.com/embed/VZPBb4zxMhw?si=6OzRPun2Y63xryXr",
+                "description": "Audio of Lamento by Jesús Villa-Rojo (1989)."
+              },
+              {
+                "id": "echoes-tape",
+                "name": "Tape",
+                "type": "audio",
+                "url": "https://drive.google.com/file/d/10g6MlatSOue9M9BjEtJ01fXgXdFsubLE/preview",
+                "description": "Audio of prepared tape for Echoes of the Unseen."
+              },
+              {
+                "id": "auto-score",
+                "name": "Score",
+                "type": "image",
+                "url": "https://drive.google.com/file/d/1oKis72Ga2yUvbrDN2HlYg0VwAie_rZ2F/preview",
+                "description": "Auto-score."
+              },
+              {
+                "id": "stage",
+                "name": "Stage Setup",
+                "type": "image",
+                "url": "https://drive.google.com/file/d/1KOCs0e8au7P48i7A3iee-ikrVlzAQNLW/preview",
+                "description": "Technical Rider for Echoes of the Unseen."
+              }
+            ],
+            "performances": [
+              {
+                "id": "casa-ciencias",
+                "event": "IX Encontro Internacional da Casa das Ciências",
+                "date": "8 July 2024",
+                "performance_place": "Aveiro, Portugal",
+                "description": "An early-stage performance showcasing a basic version of the system focused on distance-based navigation. Without a proper notation guide, the performer had to rely solely on intuition to navigate the complex sound space, which made it difficult to predict the system's response.",
+                "url": "https://www.casadasciencias.org/9encontrointernacional/noite.php",
+                "media_links": {
+                  "videos": [
+                    {
+                      "url": "https://www.youtube.com/embed/COPbWvbaphc?si=PP70Xxc8Vezc1GBD",
+                      "description": "Video of the complete performance (audio and Touchdesigner output) at the IX Encontro Internacional da Casa das Ciências, that took place in Aveiro, Portugal, on July 8, 2024. It served as an early-stage presentation of the Echoes of the Unseen project, utilizing a basic, distance-based version of the Aethra system rather than the mature motion-aware framework. During this event, the system was utilized without a proper notation guide or 'auto-score'. As a result, the performer faced significant challenges, as they had to rely solely on their intuition to navigate the complex sound space. This lack of structural support made it difficult to predict the system's generative responses and left the performer feeling exposed to the unpredictability of the machine."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "conservatorio-castilla",
+                "event": "\"La interpretación como medio creativo en la era post-digital,\" Conservatorio Superior de Música de Castilla-La Mancha",
+                "date": "1 April 2025",
+                "performance_place": "Albacete, Spain",
+                "description": "Evaluation of the preliminary system utilizing distance-based navigation. Observations from this event emphasized the need for a more refined way to interpret gestures and a structured framework to support the performer's intentions.",
+                "url": "https://csmclm.com/curso/la-interpretacion-como-medio-creativo-en-la-era-post-digital/",
+                "media_links": {
+                  "photos": [
+                    {
+                      "url": "https://drive.google.com/file/d/1zEvksZYTvv_0626enqN40ziuGA2OFSof/preview",
+                      "description": "Image of the live setup at the Conservatorio Superior de Música de Castilla-La Mancha."
+                    }
+                  ],
+                  "videos": [
+                    {
+                      "url": "https://drive.google.com/file/d/19CdJRkFDaP0CFDaLRiK2B5NZtVCufFG2/preview",
+                      "description": "Performance excerpt showcasing a preliminary version of the Aethra system utilizing distance-based navigation. Recorded during the early evaluations at the Conservatorio Superior de Música de Castilla-La Mancha on April 1, 2025, this trial highlights the performer's completely intuitive interaction with the high-dimensional latent space."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "amicad",
+                "event": "Audio Mostly & ICAD Joint Conference (AM.ICAD), Casa das Artes de Coimbra",
+                "date": "1 July 2025",
+                "performance_place": "Coimbra, Portugal",
+                "description": "This performance featured an upgraded system equipped with musical motion awareness. By using Hidden Markov Models (HMMs) as a navigation strategy, the system transformed from simply responding to inputs to actively engaging the performer. This event also marked the introduction of the first auto-score.",
+                "url": "https://amicad2025.dei.uc.pt/program.html#music-program",
+                "media_links": {
+                  "photos": [
+                    {
+                      "url": "https://drive.google.com/file/d/1FIH9qUx1owohfqJVTU74iOTD3_rob0qA/preview",
+                      "description": "Photograph capturing the performer's initial engagement with the HMM-driven Aethra system, marking the transition from static distance-based mapping to dynamic, motion-aware navigation. Control of the electronics was still done manually with me operating the one-knob control."
+                    },
+                    {
+                      "url": "https://drive.google.com/file/d/1qH5CH-MMh_OJgByF1afh_I0mDIbgBnJE/preview",
+                      "description": "Photograph capturing the live setup of the Aethra system. Because of spatial limitations, this iteration of the performance proceeded without the real-time 2D point cloud projection, relying solely on the acoustic and gestural dialogue between the saxophonist and the machine."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "fisp",
+                "event": "FISP - Festival Internacional de Saxofones de Palmela",
+                "date": "7 July 2025",
+                "performance_place": "Palmela, Portugal",
+                "description": "Continued deployment of the motion-aware Aethra system, testing the active dialogue between the human performer and the machine utilizing the foundational auto-score.",
+                "url": "https://drive.google.com/file/d/1Al8iPRiTyZh9qovQrt8VhI-3KcI05jIi/view",
+                "media_links": {
+                  "photos": [
+                    {
+                      "url": "https://drive.google.com/file/d/12-EB9pCnZBt958h8jKD_u96B2gHdKHce/preview",
+                      "description": "Live performance shot at the FISP festival."
+                    }
+                  ],
+                  "videos": [
+                    {
+                      "url": "https://drive.google.com/file/d/1Xa5VsiDMIGJeasGHo1fUSYOBOPQmcuap/preview",
+                      "description": "Performance excerpt showcasing the system's transition into a proactive musical agent. Captured during the system's iterative development, the audible instability and clipping stem from an early setup that was later optimized as the Aethra framework reached its mature state."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "enim",
+                "event": "ENIM - Encontro Nacional de Investigação em Música",
+                "date": "29 Nov 2025",
+                "performance_place": "Évora, Portugal",
+                "description": "During this performance, the system reached its current state of maturity. The integration of the one-knob control paradigm and the multimodal TouchDesigner visual interface enabled the performer to seamlessly engage in a contextual navigation of the work's universe.",
+                "url": "https://dspace.uevora.pt/rdpc/bitstream/10174/39882/1/EnIM-XIV_Livro-de-Resumos-Programa.pdf",
+                "media_links": {
+                  "photos": [
+                    {
+                      "url": "https://drive.google.com/file/d/1VyyvF1BtnZdtf6hnQ3BG_iEYVx1H_f3L/preview",
+                      "description": "Image showcasing a demo presentation of the navigation within the system."
+                    },
+                    {
+                      "url": "https://drive.google.com/file/d/1IzVg5SXVjwok1kEvlYVACyaDwqiIRrkT/preview",
+                      "description": "Image showcasing the TouchDesigner visual engine projected during the performance as well as the performance."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "lagoa",
+                "event": "\"Ressonâncias do Presente: música para saxofone e multimédia,\" Saxophone Recital, Auditorio Carlos do Carmo",
+                "date": "11 Fev 2026",
+                "performance_place": "Lagoa, Portugal",
+                "description": "A recital that solidified Aethra as a robust, mutable interface that has officially moved past the development phase into a stable framework.",
+                "url": "https://regiao-sul.pt/cultura-e-eventos/auditorio-carlos-do-carmo-acolhe-concerto-ressonancias-do-presente-de-jorge-sousa/749399",
+                "media_links": {
+                  "photos": [
+                    {
+                      "url": "https://drive.google.com/file/d/10rXDw0AHA1NpSfFE5o0fRWoLrRllenij/preview",
+                      "description": "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
+                    },
+                    {
+                      "url": "https://drive.google.com/file/d/1W4YXaS0iPJm7Rp7L1uc1VkB9l5oun2-z/preview",
+                      "description": "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
+                    },
+                    {
+                      "url": "https://drive.google.com/file/d/1rZXsbYiVDxisDXCOEOBuWoliqUtqtZjn/preview",
+                      "description": "Final live recital photograph of 'Echoes of the Unseen' showcasing the complete performative ecosystem."
+                    }
+                  ],
+                  "videos": [
+                    {
+                      "url": "NOT AVAILABLE YET",
+                      "description": "Live recital recording from the Auditorio Carlos do Carmo."
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "recording",
+                "event": "Professional Studio Recording and Documentation",
+                "date": "Late July 2026",
+                "performance_place": "Aveiro, Portugal",
+                "description": "A planned professional studio session to thoroughly record and document the artistic and technical insights derived from the mature Echoes of the Unseen system."
+              }
+            ]
+          },
+          {
+            "name": "Jazz-based Preliminary Examples",
+            "description": "This exploratory case study investigates the expansion of the Aethra system's stylistic adaptability beyond the contemporary electroacoustic domain and into the realm of jazz improvisation. he research utilized four solo instrumental recordings of jazz standards—featuring guitar, tenor saxophone, trumpet, and piano—to evaluate how Aethra's distance-based and motion-enhanced navigation frameworks could support the characteristic idiomatic patterns of jazz. Initial listening tests demonstrated that the hybrid navigation framework effectively maintained the stylistic coherence and structural integrity of the jazz vocabulary.",
+            "examples": [
+              {
+                "id": "video-1",
+                "name": "Aethra and Redman",
+                "type": "video",
+                "url": "https://drive.google.com/file/d/1SmxDA-3eXUyGgdC3Rp6NJq9MRW1j4M4C/preview",
+                "description": "Video of Aethra usage with a Joshua Redman's 2-minute solo improvisation."
+              },
+              {
+                "id": "evaluation-table",
+                "name": "Navigation Strategy Comparison using Jazz Examples",
+                "type": "audioTable",
+                "description": "Comparative analysis of kNN distance-based vs HMM motion-based sampling.",
+                "tableData": {
+                  "headers": [
+                    {
+                      "label": "Original",
+                      "span": 1
+                    },
+                    {
+                      "label": "Distance-based (kNN)",
+                      "span": 3,
+                      "subLabels": [
+                        ".2",
+                        ".5",
+                        ".9"
+                      ]
+                    },
+                    {
+                      "label": "Motion-based (HMM)",
+                      "span": 3,
+                      "subLabels": [
+                        "Parallel",
+                        "Oblique",
+                        "Contrary"
+                      ]
+                    }
+                  ],
+                  "rows": [
+                    {
+                      "instrument": "Guitar",
+                      "description": "",
+                      "files": [
+                        "/audio/Guitar-01.wav",
+                        "/audio/Guitar-02.wav",
+                        "/audio/Guitar-03.wav",
+                        "/audio/Guitar-04.wav",
+                        "/audio/Guitar-05.wav",
+                        "/audio/Guitar-06.wav",
+                        "/audio/Guitar-07.wav"
+                      ]
+                    },
+                    {
+                      "instrument": "Piano",
+                      "description": "",
+                      "files": [
+                        "/audio/Piano-01.wav",
+                        "/audio/Piano-02.wav",
+                        "/audio/Piano-03.wav",
+                        "/audio/Piano-04.wav",
+                        "/audio/Piano-05.wav",
+                        "/audio/Piano-06.wav",
+                        "/audio/Piano-07.wav"
+                      ]
+                    },
+                    {
+                      "instrument": "Sax",
+                      "description": "",
+                      "files": [
+                        "/audio/Sax-01.wav",
+                        "/audio/Sax-02.wav",
+                        "/audio/Sax-03.wav",
+                        "/audio/Sax-04.wav",
+                        "/audio/Sax-05.wav",
+                        "/audio/Sax-06.wav",
+                        "/audio/Sax-07.wav"
+                      ]
+                    },
+                    {
+                      "instrument": "Trumpet",
+                      "description": "",
+                      "files": [
+                        "/audio/Trumpet-01.wav",
+                        "/audio/Trumpet-02.wav",
+                        "/audio/Trumpet-03.wav",
+                        "/audio/Trumpet-04.wav",
+                        "/audio/Trumpet-05.wav",
+                        "/audio/Trumpet-06.wav",
+                        "/audio/Trumpet-07.wav"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bach-latent-navigator",
+        "name": "Bach Latent Navigator",
+        "pillar": "Tonal",
+        "category": "Web Platform",
+        "url": "https://nadiacarvalho.github.io/BachLatentNavigator/",
+        "repo": "https://github.com/NadiaCarvalho/BachLatentNavigator",
+        "description": "Evaluation platform for sampling strategies (k-NN vs Linear Interpolation) in music manifolds."
+      },
+      {
+        "id": "encodings-tonal",
+        "name": "Tonal Music Encodings",
+        "pillar": "Tonal",
+        "category": "Web Platform",
+        "url": "https://nadiacarvalho.github.io/Latent-Tonal-Music/",
+        "repo": "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
+        "description": "Interactive exploration of latent behavior and geometric properties of symbolic music encodings."
+      },
+      {
+        "id": "motiv-dataset",
+        "name": "Motiv Dataset",
+        "pillar": "Timbre",
+        "category": "Dataset",
+        "doi": "10.7910/DVN/RWCG4B",
+        "description": "Trajectory dataset of saxophonic musical phrases and latent motion representations."
+      },
+      {
+        "id": "saxtimbre-dataset",
+        "name": "SaxTimbre",
+        "pillar": "Timbre",
+        "category": "Dataset",
+        "doi": "10.7910/DVN/WSFBIJ",
+        "description": "Comprehensive dataset of tenor saxophone extended techniques for RAVE model training."
+      }
+    ],
+    "publications": [
+      {
+        "id": "aimc-2023",
+        "title": "Exploring Latent Spaces of Tonal Music using Variational Autoencoders",
+        "author": "Carvalho, N., & Bernardes, G.",
+        "year": 2023,
+        "venue": "AIMC 2023",
+        "doi": "10.48550/arXiv.2311.03621",
+        "pillar": "Tonal Pillar",
+        "github": "https://github.com/NadiaCarvalho/Latent-Tonal-Music",
+        "colab": "https://github.com/NadiaCarvalho/Latent-Tonal-Music/blob/main/Latent_Tonal_Music.ipynb"
+      },
+      {
+        "id": "smc-2024-sampling",
+        "title": "Exploring Sampling Strategies in Latent Spaces for Music Generation",
+        "author": "Carvalho, N., & Bernardes, G.",
+        "year": 2024,
+        "venue": "SMC 2024",
+        "doi": "10.5281/zenodo.14336029",
+        "pillar": "Tonal Pillar",
+        "github": "https://github.com/NadiaCarvalho/SMC-BachLatentNavigation",
+        "colab": "https://github.com/NadiaCarvalho/SMC-BachLatentNavigation/blob/main/BachLatentNavigation.ipynb"
+      },
+      {
+        "id": "mcm-2024-fourier",
+        "title": "Fourier Phase Spaces are in Tune with VAEs' Latent Space",
+        "author": "Carvalho, N., & Bernardes, G.",
+        "year": 2024,
+        "venue": "MCM 2024",
+        "doi": "10.1007/978-3-031-60638-0_24",
+        "pillar": "Tonal Pillar",
+        "github": "https://github.com/NadiaCarvalho/MCM-Latent-Spaces",
+        "colab": "https://github.com/NadiaCarvalho/MCM-Latent-Spaces/blob/main/MCM24_Latent_Spaces.ipynb"
+      },
+      {
+        "id": "smc-2024-sax",
+        "title": "Unveiling the Timbre Landscape: Analysis of Tenor Saxophone in RAVE Models",
+        "author": "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
+        "year": 2024,
+        "venue": "SMC 2024",
+        "doi": "10.5281/zenodo.14362599",
+        "pillar": "Timbre Pillar",
+        "github": "https://github.com/NadiaCarvalho/SMC-TimbreLandscape",
+        "colab": "https://github.com/NadiaCarvalho/SMC-TimbreLandscape/blob/main/Code.ipynb"
+      },
+      {
+        "id": "amicad-2025-motiv",
+        "title": "Motiv: A Dataset of Latent Space Representations of Musical Phrase Motions",
+        "author": "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
+        "year": 2025,
+        "venue": "AM.ICAD 2025",
+        "doi": "10.1145/3771594.3771602",
+        "pillar": "Timbre Pillar",
+        "github": "https://github.com/NadiaCarvalho/Motiv-Dataset",
+        "colab": [
+          "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Construction_Visualization.ipynb",
+          "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Analysis.ipynb"
+        ]
+      },
+      {
+        "id": "ijpadm-2025-timbre",
+        "title": "Exploring Timbre Latent Spaces: Motion-Enhanced Sampling for Musical Co-Improvisation",
+        "author": "Carvalho, N., Sousa, J., Bernardes, G., & Portovedo, H.",
+        "year": 2025,
+        "venue": "International Journal of Performance Arts and Digital Media",
+        "doi": "10.1080/14794713.2025.2536409",
+        "pillar": "Timbre Pillar",
+        "github": "https://github.com/NadiaCarvalho/IJPA-LatentSpace",
+        "colab": [
+          "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/PhraseRecordingsAnalysis.ipynb",
+          "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/Experiment1_Mechanisms.ipynb"
+        ]
+      }
+    ]
+  }

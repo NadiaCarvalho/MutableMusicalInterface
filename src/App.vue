@@ -47,8 +47,35 @@
   </div>
 </template>
 
-<script setup>
+<!--<script setup>
 import { researchData as data } from './data.js'
+</script>-->
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const items = ref([])
+const loading = ref(true)
+const error = ref(null)
+
+// The URL where your external JSON is hosted
+const dataUrl = 'https://your-external-host.com/path/to/data.json'
+
+onMounted(async () => {
+  try {
+    const response = await fetch(dataUrl)
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+    const jsonData = await response.json()
+    items.value = jsonData // Assign the fetched data to your Vue state
+  } catch (err) {
+    console.error("Failed to fetch data:", err)
+    error.value = "Could not load data."
+  } finally {
+    loading.value = false
+  }
+})
 </script>
 
 <style>

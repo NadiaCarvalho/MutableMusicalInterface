@@ -58,7 +58,7 @@ const data = ref([])
 const loading = ref(true)
 const error = ref(null)
 
-const dataUrl = 'https://github.com/NadiaCarvalho/MutableMusicalInterface/blob/main/src/data.json'
+const dataUrl = 'https://raw.githubusercontent.com/NadiaCarvalho/MutableMusicalInterface/main/src/data.json';
 
 onMounted(async () => {
   try {

@@ -7,9 +7,7 @@ export const error = ref(null)
 
 const dataUrl = 'https://raw.githubusercontent.com/NadiaCarvalho/MutableMusicalInterface/main/src/data.json'
 
-// 2. Export a function to trigger the fetch
 export async function fetchResearchData() {
-  // CRUCIAL: If we already have the data, don't fetch it again!
   if (researchData.value) return
 
   isLoading.value = true

@@ -1,10 +1,11 @@
 {
     "title": "The Musical Work as a Mutable Interface",
-    "subtitle": "Towards a Co-Creative Electroacoustic Practice TEST",
+    "subtitle": "Towards a Co-Creative Electroacoustic Practice",
+    "short_description": "A PhD research project investigating the reconfiguration of musical works into navigable, co-creative interfaces.",
     "author": "Nádia Carvalho",
     "university": "FEUP / INESC TEC",
     "year": "2026",
-    "githubCollection": "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
+    "github_collection": "https://github.com/stars/NadiaCarvalho/lists/phd-musicalwork-mutableinterface",
     "artifacts": [
       {
         "id": "broadcast-jsb",

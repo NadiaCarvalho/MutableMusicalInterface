@@ -15,7 +15,7 @@
           <router-link to="/" class="hover:text-indigo-600 transition" active-class="text-indigo-600">Home</router-link>
           <router-link to="/software" class="hover:text-indigo-600 transition">Software</router-link>
           <router-link to="/publications" class="hover:text-indigo-600 transition">Papers</router-link>
-          <a :href="data.githubCollection" target="_blank" class="flex items-center gap-1 hover:text-slate-900 transition">
+          <a :href="data.github_collection" target="_blank" class="flex items-center gap-1 hover:text-slate-900 transition">
             GitHub ↗
           </a>
         </div>
@@ -34,9 +34,7 @@
       <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
         <div>
           <h4 class="font-bold text-slate-900 mb-2">{{ data.title }}</h4>
-          <p class="text-sm text-slate-500 max-w-sm">
-            A PhD research project investigating the reconfiguration of musical works into navigable, co-creative interfaces.
-          </p>
+          <p class="text-sm text-slate-500 max-w-sm">{{ data.short_description }}</p>
         </div>
         <div class="md:text-right">
           <p class="text-sm font-bold text-slate-900">{{ data.author }}</p>
@@ -68,6 +66,7 @@ onMounted(async () => {
     }
     const jsonData = await response.json()
     data.value = jsonData // Assign the fetched data to your Vue state
+    console.log(data.value)
   } catch (err) {
     console.error("Failed to fetch data:", err)
     error.value = "Could not load data."

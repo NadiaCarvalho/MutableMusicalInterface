@@ -11,7 +11,12 @@
     paper.pillar.includes('Tonal') ? 'bg-indigo-100 text-indigo-700' : 'bg-emerald-100 text-emerald-700']">
           {{ paper.pillar }}
         </span>
-        <span class="text-slate-400 text-xs font-mono">{{ paper.venue }} • {{ paper.year }}</span>
+        <span class="text-slate-400 text-xs font-mono"> {{ paper.year }}</span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <span class="text-slate-400 text-xs font-mono">{{ paper.publication }}</span>
+        <span class="text-slate-400 text-xs font-mono">{{ paper.venue }}</span>
       </div>
 
       <h1 class="text-4xl font-black text-slate-900 leading-tight mb-6">

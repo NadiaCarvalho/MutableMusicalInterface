@@ -464,7 +464,7 @@
       "doi": "10.1007/978-3-031-60638-0_24",
       "pillar": "Tonal Pillar",
       "github": "https://github.com/NadiaCarvalho/MCM-Latent-Spaces",
-      "colab": "https://github.com/NadiaCarvalho/MCM-Latent-Spaces/blob/main/MCM24_Latent_Spaces.ipynb"
+      "colab": "https://github.com/NadiaCarvalho/MCM-Latent-Spaces/blob/main/MCM24_Latent_Spaces.ipynb",
       "abstract": "The chapter investigates the intricate relationship between Variational Autoencoders (VAEs) and Fourier phase spaces in representing musical harmony. It builds on previous research that showed high correlations between ANNs' weights and the phase of the discrete Fourier transform (DFT) space. The study focuses on using advanced MusicVAEs to analyze the structuring of musical harmony in a corpus of J.S. Bach chorales. The authors hypothesize that VAEs’ latent spaces correlate with DFT phase spaces, which are used to represent harmony according to common-tone principles. The research methodology involves creating a latent space from a MusicVAE and calculating distance matrices for points representing chords in the test corpus. The results show a robust linear and rank association between the latent and DFT phase spaces, indicating effective preservation of common-tone retention. The chapter also delves into the interpretation of the latent space, demonstrating how it captures tonal functionality and voice leading. The findings contribute to the ongoing discourse on the interpretability and limitations of latent spaces in music analysis and cognition, with implications for improving music generation models."
     },
     {
@@ -490,9 +490,9 @@
       "github": "https://github.com/NadiaCarvalho/Motiv-Dataset",
       "colab": [
         "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Construction_Visualization.ipynb",
-        "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Analysis.ipynb",
-        "abstract": "This paper introduces Motiv, a dataset of expert saxophonist recordings illustrating parallel, similar, oblique, and contrary motions. These motions are variations of three phrases from Jesús Villa-Rojo’s “Lamento,” with controlled similarities. The dataset includes 116 audio samples recorded by four tenor saxophonists, each annotated with descriptions of motions, musical scores, and latent space vectors generated using the VocalSet RAVE model. Motiv enables the analysis of motion types and their geometric relationships in latent spaces. Our preliminary dataset analysis shows that parallel motions align closely with original phrases, while contrary motions exhibit the largest deviations, and oblique motions show mixed patterns. The dataset also highlights the impact of individual performer nuances. Motiv supports a variety of music information retrieval (MIR) tasks, including gesture-based recognition, performance analysis, and motion-driven retrieval. It also provides insights into the relationship between human motion and music, contributing to real-time music interaction and automated performance systems."
-      ]
+        "https://github.com/NadiaCarvalho/Motiv-Dataset/blob/main/Dataset_Analysis.ipynb"
+      ],
+      "abstract": "This paper introduces Motiv, a dataset of expert saxophonist recordings illustrating parallel, similar, oblique, and contrary motions. These motions are variations of three phrases from Jesús Villa-Rojo’s “Lamento,” with controlled similarities. The dataset includes 116 audio samples recorded by four tenor saxophonists, each annotated with descriptions of motions, musical scores, and latent space vectors generated using the VocalSet RAVE model. Motiv enables the analysis of motion types and their geometric relationships in latent spaces. Our preliminary dataset analysis shows that parallel motions align closely with original phrases, while contrary motions exhibit the largest deviations, and oblique motions show mixed patterns. The dataset also highlights the impact of individual performer nuances. Motiv supports a variety of music information retrieval (MIR) tasks, including gesture-based recognition, performance analysis, and motion-driven retrieval. It also provides insights into the relationship between human motion and music, contributing to real-time music interaction and automated performance systems."
     },
     {
       "id": "ijpadm-2025-timbre",
@@ -505,9 +505,9 @@
       "github": "https://github.com/NadiaCarvalho/IJPA-LatentSpace",
       "colab": [
         "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/PhraseRecordingsAnalysis.ipynb",
-        "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/Experiment1_Mechanisms.ipynb",
-        "abstract": "This article investigates sampling strategies in latent space navigation to enhance co-creative music systems, focusing on timbre latent spaces. Adopting Villa-Rojo's ‘Lamento’ for tenor saxophone and tape as a case study, we conducted two experiments. The first assessed traditional corpus-based concatenative synthesis sampling within the RAVE model's latent space, finding that sampling strategies gradually deviate from a given target sonority while still relating to the original morphology. The second experiment aims at defining sampling strategies for creating variations of an input signal, namely parallel, contrary, and oblique motions. The findings expose the need to explore individual model layers and the geometric transformation nature of the contrary and oblique motions that tend to dilate the original shape. The findings highlight the potential of motion-aware sampling for more contextually aware and expressive control of music structures via CBCS."
-      ]
+        "https://github.com/NadiaCarvalho/IJPA-LatentSpace/blob/main/Experiment1_Mechanisms.ipynb"
+      ],
+      "abstract": "This article investigates sampling strategies in latent space navigation to enhance co-creative music systems, focusing on timbre latent spaces. Adopting Villa-Rojo's ‘Lamento’ for tenor saxophone and tape as a case study, we conducted two experiments. The first assessed traditional corpus-based concatenative synthesis sampling within the RAVE model's latent space, finding that sampling strategies gradually deviate from a given target sonority while still relating to the original morphology. The second experiment aims at defining sampling strategies for creating variations of an input signal, namely parallel, contrary, and oblique motions. The findings expose the need to explore individual model layers and the geometric transformation nature of the contrary and oblique motions that tend to dilate the original shape. The findings highlight the potential of motion-aware sampling for more contextually aware and expressive control of music structures via CBCS."
     }
   ]
 }

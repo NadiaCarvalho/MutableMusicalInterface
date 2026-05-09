@@ -18,9 +18,16 @@
         {{ paper.title }}
       </h1>
 
-      <p class="text-lg text-slate-500 italic">
+      <p class="text-lg font-medium text-slate-700 mb-8">
         {{ paper.author }}
       </p>
+        <!-- Abstract Section -->
+      <div v-if="paper.abstract" class="max-w-3xl">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Abstract</h2>
+        <p class="text-base text-slate-600 leading-relaxed">
+          {{ paper.abstract }}
+        </p>
+      </div>
     </header>
 
     <div class="grid md:grid-cols-3 gap-12">

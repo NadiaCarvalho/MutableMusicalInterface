@@ -81,7 +81,7 @@
         </div>
 
         <div v-if="activeCase.examples?.length" class="space-y-8">
-          <h4 class="text-sm font-black uppercase text-slate-400 tracking-widest">Media Examples</h4>
+          <h4 class="text-sm font-black uppercase text-slate-400 tracking-widest">Media Documentation</h4>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div v-for="(ex, exIndex) in activeCase.examples" :key="exIndex" @click="openExampleModal(ex)"
               class="flex flex-col p-8 bg-slate-50 rounded-[2rem] border border-slate-100 cursor-pointer hover:border-indigo-300 hover:bg-white transition-all group shadow-sm">

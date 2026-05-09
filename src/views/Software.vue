@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-6xl mx-auto px-6 py-16">
-      <h1 class="text-4xl font-bold mb-12 text-center">Software & Artifacts</h1>
+      <h1 class="text-4xl font-bold mb-12 text-center">Software Tools & Datasets</h1>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div v-for="item in data.artifacts" :key="item.id" class="research-card">

@@ -58,7 +58,6 @@ const data = ref([])
 const loading = ref(true)
 const error = ref(null)
 
-// The URL where your external JSON is hosted
 const dataUrl = 'https://github.com/NadiaCarvalho/MutableMusicalInterface/blob/main/src/data.json'
 
 onMounted(async () => {

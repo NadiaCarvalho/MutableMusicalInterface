@@ -71,10 +71,7 @@ import { onMounted } from 'vue'
 import { fetchResearchData, researchData as data, isLoading, error } from './store/dataStore'
 
 onMounted(() => {
-  // Kick off the data fetch as soon as the app loads
   fetchResearchData()
-
-  console.log(data)
 })
 </script>
 

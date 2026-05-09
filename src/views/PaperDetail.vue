@@ -96,5 +96,12 @@ import { useRoute } from 'vue-router'
 import { researchData, isLoading, error } from '../store/dataStore';
 
 const route = useRoute()
-const paper = computed(() => researchData.publications.find(p => p.id === route.params.id))
+const paper = computed(() => {
+  if (!researchData.value) return null
+  
+  // Find the artifact where the ID matches the URL parameter
+  return researchData.value.publications.find(
+    (p) => p.id === route.params.id
+  )
+})
 </script>

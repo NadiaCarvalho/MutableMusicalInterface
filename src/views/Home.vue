@@ -20,5 +20,5 @@
 </template>
 
 <script setup>
-import { researchData as data } from '../data.js'
+import { researchData as data, isLoading, error } from '../store/dataStore';
 </script>

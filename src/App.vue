@@ -1,78 +1,80 @@
 <template>
   <div id="site-wrapper" class="min-h-screen flex flex-col bg-white">
-    <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
-      <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
 
-        <router-link to="/" class="flex items-center gap-2 group">
-          <img src="./assets/mutable-icon.png" alt="Thesis Logo" class="w-10 h-10 object-contain" />
-          <div class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-white font-bold text-xs group-hover:bg-indigo-700 transition">
-            NC
+    <!-- 1. SHOW A LOADING SCREEN WHILE FETCHING -->
+    <div v-if="isLoading" class="flex-grow flex items-center justify-center">
+      <div class="text-slate-500 font-semibold animate-pulse">
+        Loading Mutable Musical Interface...
+      </div>
+    </div>
+
+    <!-- 2. SHOW AN ERROR IF THE FETCH FAILS -->
+    <div v-else-if="error" class="flex-grow flex items-center justify-center text-red-500">
+      {{ error }}
+    </div>
+
+    <template v-else-if="data">
+
+      <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+
+          <router-link to="/" class="flex items-center gap-2 group">
+            <img src="./assets/mutable-icon.png" alt="Thesis Logo" class="w-10 h-10 object-contain" />
+            <div
+              class="w-8 h-8 bg-indigo-600 rounded flex items-center justify-center text-white font-bold text-xs group-hover:bg-indigo-700 transition">
+              NC
+            </div>
+            <span class="font-bold tracking-tight text-slate-800">Thesis Portal</span>
+          </router-link>
+
+          <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
+            <router-link to="/" class="hover:text-indigo-600 transition"
+              active-class="text-indigo-600">Home</router-link>
+            <router-link to="/software" class="hover:text-indigo-600 transition">Software</router-link>
+            <router-link to="/publications" class="hover:text-indigo-600 transition">Papers</router-link>
+            <a :href="data.github_collection" target="_blank"
+              class="flex items-center gap-1 hover:text-slate-900 transition">
+              GitHub ↗
+            </a>
           </div>
-          <span class="font-bold tracking-tight text-slate-800">Thesis Portal</span>
-        </router-link>
-
-        <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
-          <router-link to="/" class="hover:text-indigo-600 transition" active-class="text-indigo-600">Home</router-link>
-          <router-link to="/software" class="hover:text-indigo-600 transition">Software</router-link>
-          <router-link to="/publications" class="hover:text-indigo-600 transition">Papers</router-link>
-          <a :href="data.github_collection" target="_blank" class="flex items-center gap-1 hover:text-slate-900 transition">
-            GitHub ↗
-          </a>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <main class="flex-grow">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </main>
+      <main class="flex-grow">
+        <router-view v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </main>
 
-    <footer class="bg-slate-50 border-t border-slate-100 py-12">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-        <div>
-          <h4 class="font-bold text-slate-900 mb-2">{{ data.title }}</h4>
-          <p class="text-sm text-slate-500 max-w-sm">{{ data.short_description }}</p>
+      <footer class="bg-slate-50 border-t border-slate-100 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-slate-900 mb-2">{{ data.title }}</h4>
+            <p class="text-sm text-slate-500 max-w-sm">{{ data.short_description }}</p>
+          </div>
+          <div class="md:text-right">
+            <p class="text-sm font-bold text-slate-900">{{ data.author }}</p>
+            <p class="text-sm text-slate-500">{{ data.university }} · {{ data.year }}</p>
+          </div>
         </div>
-        <div class="md:text-right">
-          <p class="text-sm font-bold text-slate-900">{{ data.author }}</p>
-          <p class="text-sm text-slate-500">{{ data.university }} · {{ data.year }}</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+
+    </template>
+
   </div>
 </template>
 
-<!--<script setup>
-import { researchData as data } from './data.js'
-</script>-->
-
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
+import { fetchResearchData, researchData as data, isLoading, error } from './store/dataStore'
 
-const data = ref([])
-const loading = ref(true)
-const error = ref(null)
+onMounted(() => {
+  // Kick off the data fetch as soon as the app loads
+  fetchResearchData()
 
-const dataUrl = 'https://raw.githubusercontent.com/NadiaCarvalho/MutableMusicalInterface/main/src/data.json';
-
-onMounted(async () => {
-  try {
-    const response = await fetch(dataUrl)
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
-    }
-    const jsonData = await response.json()
-    data.value = jsonData // Assign the fetched data to your Vue state
-    console.log(data.value)
-  } catch (err) {
-    console.error("Failed to fetch data:", err)
-    error.value = "Could not load data."
-  } finally {
-    loading.value = false
-  }
+  console.log(data)
 })
 </script>
 
@@ -97,13 +99,16 @@ html {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }

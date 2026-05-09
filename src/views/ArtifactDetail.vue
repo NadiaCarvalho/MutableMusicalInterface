@@ -328,13 +328,21 @@
 <script setup>
 import { ref, computed, watch, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
-import { researchData as data } from '../data.js'
+
+import { researchData as data, isLoading, error } from '../store/dataStore';
 
 const route = useRoute()
 const activeTab = ref(0)
 
 // Find Artifact
-const item = computed(() => data.artifacts.find(a => a.id === route.params.id) || null)
+const item = computed(() => {
+  if (!data.value) return null
+  
+  // Find the artifact where the ID matches the URL parameter
+  return data.value.artifacts.find(
+    (a) => a.id === route.params.id
+  )
+})
 
 // Ensure study_cases is always an array
 const normalizedStudyCases = computed(() => {

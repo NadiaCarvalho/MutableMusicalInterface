@@ -444,7 +444,7 @@
       "category": "Web Platform",
       "url": "https://nadiacarvalho.github.io/BachLatentNavigator/",
       "repo": "https://github.com/NadiaCarvalho/BachLatentNavigator",
-      "description": "Evaluation platform for sampling strategies (k-NN vs Linear Interpolation) in music manifolds."
+      "description": "An interactive evaluation platform developed to visualize and test different sampling strategies for musical generation. It provides a real-time, coordinate-based visualization of the J.S. Bach chorale latent space, enabling users to perform a comparative analysis of how linear interpolation (LI) versus k-nearest neighbor (k-NN) and angular displacement (k-NN+AD) sampling strategies preserve tonal logic and alter generated chord outcomes."
     },
     {
       "id": "encodings-tonal",
@@ -453,7 +453,7 @@
       "category": "Web Platform",
       "url": "https://nadiacarvalho.github.io/Latent-Tonal-Music/",
       "repo": "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
-      "description": "Interactive exploration of latent behavior and geometric properties of symbolic music encodings."
+      "description": "An interactive web-platform that allows users to explore the latent behavior and geometric properties of different musical encodings across a diverse range of symbolic music compositions. By allowing users to interact with uncompressed MusicXML formats, it provides a tangible bridge between abstract mathematical representations and their musical outcomes."
     },
     {
       "id": "motiv-dataset",
@@ -461,7 +461,7 @@
       "pillar": "Timbre",
       "category": "Dataset",
       "doi": "10.7910/DVN/RWCG4B",
-      "description": "Trajectory dataset of saxophonic musical phrases and latent motion representations."
+      "description": "A collection of latent space representations and expert tenor saxophone recordings that capture the motion and trajectory of musical phrases. The dataset explicitly encodes intentional performance gestures based on a taxonomy of musical motions—parallel, oblique, and contrary—to enable motion-aware sampling strategies for co-creative systems. Featuring three curated phrases extracted from Jesús Villa-Rojo’s Lamento, it provides a dense, semantically organized vocabulary of instrumental motion that bridges the gap between abstract latent navigation and intentional musical dialogue."
     },
     {
       "id": "saxtimbre-dataset",
@@ -469,7 +469,7 @@
       "pillar": "Timbre",
       "category": "Dataset",
       "doi": "10.7910/DVN/WSFBIJ",
-      "description": "Comprehensive dataset of tenor saxophone extended techniques for RAVE model training."
+      "description": "A comprehensive dataset of tenor saxophone timbres designed for training RAVE models and analyzing timbre landscapes. Performed by expert saxophonist Jorge Sousa, the corpus comprises 191 individual audio samples yielding approximately ten minutes of recorded material. It systematically organizes a broad spectrum of playing styles, ranging from conventional articulation to complex extended techniques, across four primary pitch registers and up to five distinct dynamic levels."
     }
   ],
   "publications": [

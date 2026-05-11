@@ -7,7 +7,7 @@
       <router-link to="/software" class="p-10 border-2 border-slate-100 rounded-3xl hover:border-indigo-500 hover:bg-indigo-50/30 transition-all group">
         <div class="text-4xl mb-4">🎹</div>
         <h2 class="text-2xl font-bold mb-2 group-hover:text-indigo-600">Software Tools & Datasets</h2>
-        <p class="text-slate-500 text-sm">Explore interactive systems, autonomous agents, and datasets.</p>
+        <p class="text-slate-500 text-sm">Interactive systems and datasets developed during research.</p>
       </router-link>
 
       <router-link to="/publications" class="p-10 border-2 border-slate-100 rounded-3xl hover:border-indigo-500 hover:bg-indigo-50/30 transition-all group">

@@ -11,7 +11,8 @@
           class="block p-6 bg-white border border-slate-100 rounded-xl hover:border-indigo-300 transition">
           <div class="flex justify-between items-start">
             <div>
-              <p class="text-xs font-mono text-slate-400 mb-1">{{ paper.venue }} ({{ paper.year }})</p>
+              <p class="text-xs font-mono text-slate-500 mb-1">{{ paper.year }}</p>
+              <p class="text-xs font-mono text-slate-400 mb-1">{{ paper.publication_acron }}</p>
               <h3 class="text-lg font-bold">{{ paper.title }}</h3>
             </div>
             <span class="text-slate-300">→</span>

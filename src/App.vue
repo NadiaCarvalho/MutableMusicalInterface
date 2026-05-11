@@ -68,10 +68,11 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { fetchResearchData, researchData as data, isLoading, error } from './store/dataStore'
+import { fetchResearchData, fetchResearchDataLocal, researchData as data, isLoading, error } from './store/dataStore'
 
 onMounted(() => {
   fetchResearchData()
+  //fetchResearchDataLocal()
 })
 </script>
 

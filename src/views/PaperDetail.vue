@@ -15,7 +15,7 @@
       </div>
 
       <div class="flex flex-col gap-2">
-        <span class="text-slate-400 text-xs font-mono">{{ paper.publication }}</span>
+        <span class="text-slate-400 text-xs font-mono">{{ paper.publication }} ({{ paper.publication_acron }})</span>
         <span class="text-slate-400 text-xs font-mono">{{ paper.venue }}</span>
       </div>
 

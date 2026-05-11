@@ -26,3 +26,26 @@ export async function fetchResearchData() {
     isLoading.value = false
   }
 }
+
+export async function fetchResearchDataLocal() {
+  if (researchData.value) return
+
+  isLoading.value = true
+  error.value = null
+
+  try {
+    // 1. Dynamically import the file (works inside functions)
+    const localModule = await import('../data.json')
+    
+    // 2. Bundlers like Vite usually put the JSON under the .default property
+    researchData.value = localModule.default || localModule
+    
+    console.log("Mock data loaded:", researchData.value)
+
+  } catch (err) {
+    console.error("Error setting mock data:", err)
+    error.value = "Could not load mock data."
+  } finally {
+    isLoading.value = false
+  }
+}

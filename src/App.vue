@@ -71,8 +71,13 @@ import { onMounted } from 'vue'
 import { fetchResearchData, fetchResearchDataLocal, researchData as data, isLoading, error } from './store/dataStore'
 
 onMounted(() => {
-  fetchResearchData()
-  //fetchResearchDataLocal()
+  if (import.meta.env.DEV) {
+    console.log("We are running in DEBUG / DEV mode!");
+    fetchResearchDataLocal()
+  } else {
+    console.log("We are in PRODUCTION.");
+    fetchResearchData()
+  }
 })
 </script>
 

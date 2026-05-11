@@ -14,7 +14,7 @@
       "category": "Web Platform",
       "url": "https://nadiacarvalho.github.io/BroadcastJSB/",
       "repo": "https://github.com/NadiaCarvalho/BroadcastJSB",
-      "description": "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style",
+      "description": "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style.",
       "study_cases": [
         {
           "name": "BWV 269",
@@ -110,7 +110,14 @@
       "pillar": "Timbre",
       "category": "PD patch + Py4PD scripts",
       "repo": "https://github.com/NadiaCarvalho/Aethra",
-      "description": "A co-creative autonomous agent for real-time mixed music improvisation using RAVE and shared intentionality models.",
+      "description": [
+        "Aethra is an autonomous musical agent and co-creative interface built in Pure Data and Python that transforms fixed electroacoustic tape into a responsive, real-time improvisational partner. By replacing static audio playback with dynamic latent space exploration, it establishes a shared environment where authorship is distributed between human intuition and machine agency.", 
+        "Core Features:",
+        "* Single-Axis Control: Synthesizes multidimensional complexity into a one-knob interface, allowing performers to seamlessly navigate preloaded latent spaces without cognitive overload",
+        "* Dual-Mode Navigation Engine: Translates physical gestures using two distinct algorithmic strategies: distance-based navigation (k-NN) for textural sculpting, and motion-based navigation (HMM) to actively anticipate the performer's gestures",
+        "* Real-Time Timbre Transfer: Utilizes a generative timbre model to dynamically morph the live instrument's acoustic sound into novel sonic textures",
+        "* Visual Explainability: Connects to a TouchDesigner visual engine to project a real-time 2D point-cloud of the latent space, bridging the gap between invisible algorithmic processes and the audience's perception"
+      ],
       "media_documentation": [
         {
           "id": "aethra-config-initialization-demo",

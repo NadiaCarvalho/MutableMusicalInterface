@@ -15,7 +15,9 @@
         </span>
       </div>
       <h1 class="text-5xl font-black mb-6 leading-tight text-slate-900">{{ item.name }}</h1>
-      <p class="text-xl text-slate-600 leading-relaxed max-w-3xl">{{ item.description }}</p>
+      
+      <p v-if="typeof item.description === 'string'" class="text-xl text-slate-600 leading-relaxed max-w-3xl">{{ item.description }}</p>
+      <p v-else v-for="[pkey, par] in Object.entries(item.description)" class="text-xl leading-relaxed max-w-3xl mb-4" :class="pkey==='0' ? 'text-slate-800':'text-slate-500'">{{ par }}</p>
     </header>
 
     <div class="flex flex-wrap gap-4 mb-16">

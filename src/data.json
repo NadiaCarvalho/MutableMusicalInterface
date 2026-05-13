@@ -134,18 +134,18 @@
           "description": "A demonstration of loading a configuration file into Aethra's Pure Data interface, showcasing the configuration parser automating the retrieval of audio source file paths, saved latent vectors (.pkl files), and HMM transition models to enable smooth real-time playback and synthesis."
         },
         {
-          "id": "aethra-single-axis-interface-demo",
-          "name": "Single Axis Interface and Navigation Modes",
+          "id": "aethra-single-axis-interface-demo-echoes",
+          "name": "Single Axis Interface and Navigation Modes - Echoes of the Unseen Example",
           "type": "video",
-          "url": "https://drive.google.com/file/d/1hRC_xxlblWpUtGOzM123xDOK19u7zJDa/preview",
-          "description": "A screencast demonstrating how Aethra's single-axis control knob mitigates cognitive overload by compressing the n-dimensional manifold into a unified control axis. The video highlights the system's dual-mode navigation engine, showcasing the toggle between Distance-Based Navigation, which utilizes weighted Euclidean exploration for continuous textural sculpting, and Motion-Based Navigation, which employs a Gaussian Hidden Markov Model (HMM) to actively anticipate performative gestures like parallel, oblique, and contrary motions."
+          "url": "https://drive.google.com/file/d/1jez2Ytsy4tCEgF5GVwdaAuYz-EM0KSSW/preview",
+          "description": "A screencast demonstrating how Aethra's single-axis control knob mitigates cognitive overload by compressing the n-dimensional manifold into a unified control axis. The video highlights the system's dual-mode navigation engine, showcasing the toggle between Distance-Based Navigation, which utilizes weighted Euclidean exploration for continuous textural sculpting, and Motion-Based Navigation, which employs a Gaussian Hidden Markov Model (HMM) to actively anticipate performative gestures like parallel, oblique, and contrary motions. The use of the Linear Fidelity mode preserves a strict temporal reference to the original score."
         },
         {
-          "id": "aethra-synthesis-logic-demo",
-          "name": "Synthesis Logic: Linear vs. Cumulative",
+          "id": "aethra-single-axis-interface-demo-jazz",
+          "name": "Single Axis Interface and Navigation Modes - Jazz Trumpet Example",
           "type": "video",
-          "url": "https://drive.google.com/file/d/1hRC_xxlblWpUtGOzM123xDOK19u7zJDa/preview",
-          "description": "A demonstration of Aethra's real-time audio synthesis architecture. The video showcases the toggle between Linear Fidelity mode, which preserves a strict temporal reference to the original score, and Cumulative Transformation mode, which employs a recursive approach for autonomous, continuous morphological evolutions. It also explains how the segment length parameter governs temporal resolution, balancing interactive latency with structural development by processing audio in discrete macroscopic segments. Finally, it highlights the granular playback engine, demonstrating how it bypasses the neural decoder to retrieve and concatenate raw audio using a Hann windowing strategy and a 170ms metronome cycle, ensuring smooth morphological continuity without spectral clicks."
+          "url": "https://drive.google.com/file/d/1q4Y7KeA7wc-GEqnPv3r0wiM6tguZxgwu/preview",
+          "description": "A screencast demonstrating how Aethra's single-axis control knob mitigates cognitive overload by compressing the n-dimensional manifold into a unified control axis using a jazzistic trumpet phrase. The video highlights the system's dual-mode navigation engine, showcasing the toggle between Distance-Based Navigation, which utilizes weighted Euclidean exploration for continuous textural sculpting, and Motion-Based Navigation, which employs a Gaussian Hidden Markov Model (HMM) to actively anticipate performative gestures like parallel, oblique, and contrary motions. The use of the Cumulative Transformation mode in the example, employing a recursive approach for autonomous, leads to continuous morphological evolutions."
         },
         {
           "id": "aethra-mapping-aethra-to-touchdesigner-demo",

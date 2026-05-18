@@ -38,13 +38,13 @@
       </div>
     </div>
 
-    <section v-if="item.media_documentation.filter(i => i.display != false)?.length" class="mb-24 space-y-8">
+    <section v-if="item.media_documentation?.filter(i => i.display != false)?.length" class="mb-24 space-y-8">
       <div class="border-b border-slate-100 pb-4">
         <h4 class="text-sm font-black uppercase text-slate-400 tracking-widest">Software Documentation</h4>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div v-for="(doc, dIdx) in item.media_documentation.filter(i => i.display != false)" :key="dIdx"
+        <div v-for="(doc, dIdx) in item.media_documentation?.filter(i => i.display != false)" :key="dIdx"
           class="flex flex-col p-8 bg-slate-50/50 rounded-[2.5rem] border border-slate-100 hover:border-indigo-300 hover:bg-white transition-all group shadow-sm">
           <div class="mb-6 space-y-2">
             <h5 class="font-black text-slate-900 text-xl group-hover:text-indigo-600 transition-colors">
@@ -84,10 +84,10 @@
           <p class="text-slate-600 leading-relaxed text-lg whitespace-pre-wrap">{{ activeCase.description }}</p>
         </div>
 
-        <div v-if="activeCase.examples.filter(i => i.display != false)?.length" class="space-y-8">
+        <div v-if="activeCase.examples?.filter(i => i.display != false)?.length" class="space-y-8">
           <h4 class="text-sm font-black uppercase text-slate-400 tracking-widest">Media Documentation</h4>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div v-for="(ex, exIndex) in activeCase.examples.filter(i => i.display != false)" :key="exIndex" @click="openExampleModal(ex)"
+            <div v-for="(ex, exIndex) in activeCase.examples?.filter(i => i.display != false)" :key="exIndex" @click="openExampleModal(ex)"
               class="flex flex-col p-8 bg-slate-50 rounded-[2rem] border border-slate-100 cursor-pointer hover:border-indigo-300 hover:bg-white transition-all group shadow-sm">
 
               <div class="mb-6 flex justify-between items-start">

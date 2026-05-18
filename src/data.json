@@ -15,6 +15,7 @@
       "url": "https://nadiacarvalho.github.io/BroadcastJSB/",
       "repo": "https://github.com/NadiaCarvalho/BroadcastJSB",
       "description": "BroadcastJSB transforms the J.S. Bach corpus into a fluid, navigable territory. Designed as a vintage analog radio, this interactive web application allows users to 'detune' original Bach compositions by turning a dial, seamlessly navigating a 256-dimensional AI-generated space. As users introduce drift, the system dynamically reharmonizes the music. Depending on the selected decoder strategy, the application can generate localized common-tone substitutions, calculate synthetic geometric midpoints, or propel the harmonic sequence into highly chromatic, high-entropy territories while strictly preserving the directional voice-leading of the original style.",
+      "media_documentation": [],
       "study_cases": [
         {
           "name": "BWV 269",
@@ -447,6 +448,7 @@
       "category": "Web Platform",
       "url": "https://nadiacarvalho.github.io/BachLatentNavigator/",
       "repo": "https://github.com/NadiaCarvalho/BachLatentNavigator",
+      "media_documentation": [],
       "description": "An interactive evaluation platform developed to visualize and test different sampling strategies for musical generation. It provides a real-time, coordinate-based visualization of the J.S. Bach chorale latent space, enabling users to perform a comparative analysis of how linear interpolation (LI) versus k-nearest neighbor (k-NN) and angular displacement (k-NN+AD) sampling strategies preserve tonal logic and alter generated chord outcomes."
     },
     {
@@ -455,6 +457,7 @@
       "pillar": "Tonal",
       "category": "Web Platform",
       "url": "https://nadiacarvalho.github.io/Latent-Tonal-Music/",
+      "media_documentation": [],
       "repo": "https://github.com/NadiaCarvalho/Latent-Tonal-Music/tree/website-encodings",
       "description": "An interactive web-platform that allows users to explore the latent behavior and geometric properties of different musical encodings across a diverse range of symbolic music compositions. By allowing users to interact with uncompressed MusicXML formats, it provides a tangible bridge between abstract mathematical representations and their musical outcomes."
     },
@@ -464,6 +467,7 @@
       "pillar": "Timbre",
       "category": "Dataset",
       "doi": "10.7910/DVN/RWCG4B",
+      "media_documentation": [],
       "description": "A collection of latent space representations and expert tenor saxophone recordings that capture the motion and trajectory of musical phrases. The dataset explicitly encodes intentional performance gestures based on a taxonomy of musical motions—parallel, oblique, and contrary—to enable motion-aware sampling strategies for co-creative systems. Featuring three curated phrases extracted from Jesús Villa-Rojo’s Lamento, it provides a dense, semantically organized vocabulary of instrumental motion that bridges the gap between abstract latent navigation and intentional musical dialogue."
     },
     {
@@ -472,6 +476,7 @@
       "pillar": "Timbre",
       "category": "Dataset",
       "doi": "10.7910/DVN/WSFBIJ",
+      "media_documentation": [],
       "description": "A comprehensive dataset of tenor saxophone timbres designed for training RAVE models and analyzing timbre landscapes. Performed by expert saxophonist Jorge Sousa, the corpus comprises 191 individual audio samples yielding approximately ten minutes of recorded material. It systematically organizes a broad spectrum of playing styles, ranging from conventional articulation to complex extended techniques, across four primary pitch registers and up to five distinct dynamic levels."
     }
   ],
